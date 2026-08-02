@@ -1,0 +1,276 @@
+# Linux Basics 
+
+## Introduction
+
+Linux is one of the most widely used operating systems in cloud computing, DevOps, and system administration. Most cloud servers run on Linux, making it an essential skill for IT professionals.
+
+---
+
+# Linux Basic Commands
+
+## 1. Check Current Directory
+
+```bash
+pwd
+```
+
+Displays the current working directory.
+
+---
+
+## 2. List Files and Directories
+
+```bash
+ls
+```
+
+Detailed listing:
+
+```bash
+ls -l
+```
+
+Show hidden files:
+
+```bash
+ls -la
+```
+
+---
+
+## 3. Change Directory
+
+Go to a folder:
+
+```bash
+cd Documents
+```
+
+Go back one level:
+
+```bash
+cd ..
+```
+
+Go to the home directory:
+
+```bash
+cd ~
+```
+
+---
+
+## 4. Create a Directory
+
+```bash
+mkdir DevOps
+```
+
+Create nested directories:
+
+```bash
+mkdir -p project/dev/test
+```
+
+---
+
+## 5. Create a File
+
+```bash
+touch file1.txt
+```
+
+---
+
+## 6. Display File Content
+
+```bash
+cat file1.txt
+```
+
+---
+
+## 7. Copy Files
+
+```bash
+cp file1.txt file2.txt
+```
+
+Copy a directory:
+
+```bash
+cp -r source_dir backup_dir
+```
+
+---
+
+## 8. Move or Rename Files
+
+Rename:
+
+```bash
+mv file1.txt newfile.txt
+```
+
+Move to another directory:
+
+```bash
+mv newfile.txt Documents/
+```
+
+---
+
+## 9. Delete Files
+
+Delete a file:
+
+```bash
+rm file1.txt
+```
+
+Delete a directory:
+
+```bash
+rm -r DevOps
+```
+
+---
+
+## 10. Search Text
+
+```bash
+grep "Linux" file.txt
+```
+
+---
+
+## 11. Find Files
+
+```bash
+find /home -name "*.txt"
+```
+
+---
+
+## 12. Check Current User
+
+```bash
+whoami
+```
+
+---
+
+## 13. Check Disk Usage
+
+```bash
+df -h
+```
+
+---
+
+## 14. Check Memory Usage
+
+```bash
+free -m
+```
+
+---
+
+## 15. Check IP Address
+
+```bash
+hostname -I
+```
+
+or
+
+```bash
+ip addr
+```
+
+---
+
+# Hard Link vs Soft Link
+
+## Hard Link
+
+Create a hard link:
+
+```bash
+ln file1.txt hardlink.txt
+```
+
+Verify inode numbers:
+
+```bash
+ls -li
+```
+
+### Characteristics
+
+* Another name for the same file.
+* Shares the same inode.
+* Changes made through one name are visible through the other.
+* Continues to work even if the original filename is deleted.
+* Cannot span different file systems.
+* Cannot be created for directories in normal use.
+
+---
+
+## Soft Link (Symbolic Link)
+
+Create a soft link:
+
+```bash
+ln -s file1.txt softlink.txt
+```
+
+Verify:
+
+```bash
+ls -l
+```
+
+### Characteristics
+
+* Acts like a shortcut.
+* Has its own inode.
+* Points to the original file.
+* Becomes broken if the original file is deleted or moved.
+* Can point across different file systems.
+* Can link to directories.
+
+---
+
+## Hard Link vs Soft Link
+
+| Feature                              | Hard Link        | Soft Link |
+| ------------------------------------ | ---------------- | --------- |
+| Inode                                | Same as original | Different |
+| Works after original file is deleted | ✅ Yes            | ❌ No      |
+| Can cross file systems               | ❌ No             | ✅ Yes     |
+| Can link directories                 | ❌ No             | ✅ Yes     |
+
+
+# Useful Linux Demo Commands
+
+```bash
+pwd
+ls
+mkdir demo
+cd demo
+touch file1.txt
+echo "Hello DevOps" > file1.txt
+cat file1.txt
+cp file1.txt file2.txt
+mv file2.txt newfile.txt
+ln file1.txt hardlink.txt
+ln -s file1.txt softlink.txt
+ls -li
+ls -l
+rm newfile.txt
+cd ..
+rm -r demo
+```
+
+
