@@ -1,0 +1,9 @@
+----------------------------------------
+----------------------------------------
+# What I did today
+# 3 hours - Attended DevOps Roadmap morning session
+# Comment on Video what you learnt
+# Gave a 2 min talk on IP address and Subnet evening session
+# Watched github to ec2 in 20 mins video from youtube archive
+# Created github repository and ec2 linux vm
+
