@@ -1,1 +1,29 @@
-#No coding done today
+# Created GIT repository
+mkdir Aug2026_Kunal_Hedau_Pathnex
+cd Aug2026_Kunal_Hedau_Pathnex
+mkdir timings
+mkdir coding\ practice
+#
+vi timings/Day01-01-Aug-2026.txt
+vi coding\ Practice/Day01-02-Jul-2026.txt
+
+git init
+git config --global init.defaultBranch master
+git remote add origin https://github.com/kunalhedau1306/Aug2026_Kunal_Hedau_Pathnex.git
+git add .
+git config --global user.name "Kunal Hedau"
+git config --global user.email kunal.hedau@gmail.com
+git commit -m "Added Day01 files in timings and coding practice"
+
+# Create ssh key and add it to git repo
+ssh-keygen -t ed25519 -C "kunal.hedau@example.com"
+cat ~/.ssh/id_ed25519.pub
+
+# Set remote repo url to ssh
+cd Aug2026_Kunal_Hedau_Pathnex/
+git remote -v
+git remote set-url origin git@github.com:kunalhedau1306/Aug2026_Kunal_Hedau_Pathnex.git
+
+# Test ssh connection to Git repo and push the changes to origin master branch
+ssh -T git@github.com
+git push -u origin master
