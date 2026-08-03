@@ -1,0 +1,472 @@
++ echo ========================================================
+========================================================
++ echo 'Linux Practice - Day 3'
+Linux Practice - Day 3
++ echo 'Environment: Amazon EC2 - Amazon Linux'
+Environment: Amazon EC2 - Amazon Linux
++ echo ========================================================
+========================================================
++ echo
+
++ echo ==============================
+==============================
++ echo 'Topic: Absolute & Relative Path'
+Topic: Absolute & Relative Path
++ echo ==============================
+==============================
++ pwd
+/home/ec2-user
++ ls
+Aug2026_Kunal_Hedau_Pathnex
+fruits.txt
+linux_day3.sh
+linux_day3_output.txt
+linux_day3_output1.txt
+numbers.txt
+values.txt
++ cd /tmp
++ pwd
+/tmp
++ cd /var/log
++ pwd
+/var/log
++ cd ..
++ pwd
+/var
++ cd /home/ec2-user
++ pwd
+/home/ec2-user
++ echo
+
++ echo ==============================
+==============================
++ echo 'Topic: CPU Information'
+Topic: CPU Information
++ echo ==============================
+==============================
++ cd
++ nproc
+2
++ lscpu
+Architecture:                            x86_64
+CPU op-mode(s):                          32-bit, 64-bit
+Address sizes:                           46 bits physical, 48 bits virtual
+Byte Order:                              Little Endian
+CPU(s):                                  2
+On-line CPU(s) list:                     0,1
+Vendor ID:                               GenuineIntel
+Model name:                              Intel(R) Xeon(R) Platinum 8259CL CPU @ 2.50GHz
+CPU family:                              6
+Model:                                   85
+Thread(s) per core:                      2
+Core(s) per socket:                      1
+Socket(s):                               1
+Stepping:                                7
+BogoMIPS:                                5000.01
+Flags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault pti fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves ida arat pku ospke
+Hypervisor vendor:                       KVM
+Virtualization type:                     full
+L1d cache:                               32 KiB (1 instance)
+L1i cache:                               32 KiB (1 instance)
+L2 cache:                                1 MiB (1 instance)
+L3 cache:                                35.8 MiB (1 instance)
+NUMA node(s):                            1
+NUMA node0 CPU(s):                       0,1
+Vulnerability Gather data sampling:      Unknown: Dependent on hypervisor status
+Vulnerability Ghostwrite:                Not affected
+Vulnerability Indirect target selection: Mitigation; Aligned branch/return thunks
+Vulnerability Itlb multihit:             KVM: Mitigation: VMX unsupported
+Vulnerability L1tf:                      Mitigation; PTE Inversion
+Vulnerability Mds:                       Vulnerable: Clear CPU buffers attempted, no microcode; SMT Host state unknown
+Vulnerability Meltdown:                  Mitigation; PTI
+Vulnerability Mmio stale data:           Vulnerable: Clear CPU buffers attempted, no microcode; SMT Host state unknown
+Vulnerability Old microcode:             Not affected
+Vulnerability Reg file data sampling:    Not affected
+Vulnerability Retbleed:                  Vulnerable
+Vulnerability Spec rstack overflow:      Not affected
+Vulnerability Spec store bypass:         Vulnerable
+Vulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:                Mitigation; Retpolines; STIBP disabled; RSB filling; PBRSB-eIBRS Not affected; BHI Retpoline
+Vulnerability Srbds:                     Not affected
+Vulnerability Tsa:                       Not affected
+Vulnerability Tsx async abort:           Not affected
+Vulnerability Vmscape:                   Not affected
++ uptime
+ 17:18:29 up 24 min,  1 user,  load average: 0.00, 0.00, 0.00
++ echo
+
++ echo ==============================
+==============================
++ echo 'Topic: Memory'
+Topic: Memory
++ echo ==============================
+==============================
++ free -h
+               total        used        free      shared  buff/cache   available
+Mem:           912Mi       163Mi       491Mi       0.0Ki       257Mi       617Mi
+Swap:             0B          0B          0B
++ echo
+
++ echo ==============================
+==============================
++ echo 'Topic: Disk Usage'
+Topic: Disk Usage
++ echo ==============================
+==============================
++ df -h
+Filesystem        Size  Used Avail Use% Mounted on
+devtmpfs          420M     0  420M   0% /dev
+tmpfs             457M     0  457M   0% /dev/shm
+tmpfs             183M  436K  183M   1% /run
+efivarfs          128K  2.7K  121K   3% /sys/firmware/efi/efivars
+/dev/nvme0n1p1    8.0G  1.8G  6.2G  22% /
+tmpfs             457M     0  457M   0% /tmp
+/dev/nvme0n1p128   10M  1.3M  8.7M  13% /boot/efi
+tmpfs              92M     0   92M   0% /run/user/1000
++ df -ih
+Filesystem       Inodes IUsed IFree IUse% Mounted on
+devtmpfs           105K   367  105K    1% /dev
+tmpfs              115K     2  115K    1% /dev/shm
+tmpfs              800K   599  800K    1% /run
+efivarfs              0     0     0     - /sys/firmware/efi/efivars
+/dev/nvme0n1p1     4.0M   50K  4.0M    2% /
+tmpfs              1.0M    17  1.0M    1% /tmp
+/dev/nvme0n1p128      0     0     0     - /boot/efi
+tmpfs               23K    16   23K    1% /run/user/1000
++ du -sh Aug2026_Kunal_Hedau_Pathnex fruits.txt linux_day3.sh linux_day3_output.txt linux_day3_output1.txt numbers.txt values.txt
+404K	Aug2026_Kunal_Hedau_Pathnex
+4.0K	fruits.txt
+4.0K	linux_day3.sh
+8.0K	linux_day3_output.txt
+20K	linux_day3_output1.txt
+4.0K	numbers.txt
+4.0K	values.txt
++ du --inodes -sh Aug2026_Kunal_Hedau_Pathnex fruits.txt linux_day3.sh linux_day3_output.txt linux_day3_output1.txt numbers.txt values.txt
+83	Aug2026_Kunal_Hedau_Pathnex
+1	fruits.txt
+1	linux_day3.sh
+1	linux_day3_output.txt
+1	linux_day3_output1.txt
+1	numbers.txt
+1	values.txt
++ echo
+
++ echo ==============================
+==============================
++ echo 'Topic: Head Command'
+Topic: Head Command
++ echo ==============================
+==============================
++ seq 100
++ head numbers.txt
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
++ head -5 numbers.txt
+1
+2
+3
+4
+5
++ echo
+
++ echo ==============================
+==============================
++ echo 'Topic: Tail Command'
+Topic: Tail Command
++ echo ==============================
+==============================
++ tail numbers.txt
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
++ tail -5 numbers.txt
+96
+97
+98
+99
+100
++ echo
+
++ echo ==============================
+==============================
++ echo 'Topic: Find Command'
+Topic: Find Command
++ echo ==============================
+==============================
++ find . -name numbers.txt
+./numbers.txt
++ find /etc -name '*.conf'
+/etc/dracut.conf.d/ec2.conf
+/etc/dnf/plugins/release-notification.conf
+/etc/dnf/plugins/supportinfo.conf
+/etc/dnf/plugins/copr.conf
+/etc/dnf/plugins/debuginfo-install.conf
+/etc/dnf/dnf.conf
+/etc/dnf/protected.d/dnf.conf
+/etc/dnf/protected.d/grub2-tools-minimal.conf
+/etc/dnf/protected.d/systemd.conf
+/etc/dnf/protected.d/sudo.conf
+/etc/dnf/protected.d/grub2-efi-x64-ec2.conf
+/etc/pki/ca-trust/ca-legacy.conf
+/etc/host.conf
+/etc/ld.so.conf
+/etc/ld.so.conf.d/dyninst-x86_64.conf
+/etc/nsswitch.conf
+/etc/libaudit.conf
+/etc/selinux/semanage.conf
+/etc/selinux/targeted/setrans.conf
+/etc/xattr.conf
+find: ‘/etc/grub.d’: Permission denied
+/etc/request-key.conf
+/etc/request-key.d/id_resolver.conf
+/etc/dbus-1/session.conf
+/etc/dbus-1/system.conf
+/etc/dbus-1/system.d/org.selinux.conf
+/etc/libreport/events.d/collect_dnf.conf
+/etc/gss/mech.d/proxymech.conf
+/etc/krb5.conf
+find: ‘/etc/ssh/sshd_config.d’: Permission denied
+/etc/ssh/ssh_config.d/50-redhat.conf
+/etc/security/access.conf
+/etc/security/chroot.conf
+/etc/security/faillock.conf
+/etc/security/group.conf
+/etc/security/limits.conf
+/etc/security/namespace.conf
+/etc/security/pam_env.conf
+/etc/security/sepermit.conf
+/etc/security/time.conf
+/etc/security/pwquality.conf
+/etc/modprobe.d/lockd.conf
+/etc/systemd/networkd.conf
+/etc/systemd/resolved.conf
+/etc/systemd/journald.conf
+/etc/systemd/logind.conf
+/etc/systemd/oomd.conf
+/etc/systemd/system.conf
+/etc/systemd/user.conf
+/etc/systemd/coredump.conf
+/etc/systemd/homed.conf
+/etc/systemd/pstore.conf
+/etc/systemd/sleep.conf
+/etc/systemd/timesyncd.conf
+/etc/systemd/system.conf.d/50-limits.conf
+/etc/dracut.conf
+/etc/sysctl.conf
+/etc/sysctl.d/99-sysctl.conf
+/etc/sysctl.d/00-defaults.conf
+/etc/udev/udev.conf
+/etc/sestatus.conf
+/etc/openldap/ldap.conf
+/etc/idmapd.conf
+/etc/libuser.conf
+/etc/lsm/lsmd.conf
+/etc/lsm/pluginconf.d/sim.conf
+/etc/gssproxy/99-network-fs-clients.conf
+/etc/gssproxy/gssproxy.conf
+/etc/gssproxy/24-nfs-server.conf
+/etc/logrotate.conf
+/etc/mke2fs.conf
+find: ‘/etc/sssd’: Permission denied
+/etc/chrony.conf
+/etc/dhcp/dhclient.conf
+/etc/rsyslog.d/21-cloudinit.conf
+/etc/resolv.conf
+/etc/nfs.conf
+/etc/nfsmount.conf
+/etc/sudo.conf
+find: ‘/etc/sudoers.d’: Permission denied
+find: ‘/etc/audit’: Permission denied
+/etc/rsyncd.conf
+/etc/man_db.conf
+/etc/cpupower-service.conf
+/etc/locale.conf
++ find /var -type d
++ head
+find: ‘/var/cache/ldconfig’: Permission denied
+find: ‘/var/cache/private’: Permission denied
+find: /var
+/var/cache
+/var/cache/bpf
+/var/cache/ldconfig
+/var/cache/private
+/var/cache/krb5rcache
+/var/cache/dnf
+/var/cache/dnf/amazonlinux-eacdee170d67c224
+/var/cache/dnf/amazonlinux-eacdee170d67c224/repodata
+/var/cache/dnf/amazonlinux-eacdee170d67c224/packages
+‘/var/log/private’: Permission denied
++ echo
+
++ echo ==============================
+==============================
++ echo 'Topic: Sort Command'
+Topic: Sort Command
++ echo ==============================
+==============================
++ printf 'Orange\nApple\nBanana\nMango\n'
++ cat fruits.txt
+Orange
+Apple
+Banana
+Mango
++ sort fruits.txt
+Apple
+Banana
+Mango
+Orange
++ printf '25\n5\n100\n12\n'
++ sort -n values.txt
+5
+12
+25
+100
++ du -sh Aug2026_Kunal_Hedau_Pathnex fruits.txt linux_day3.sh linux_day3_output.txt linux_day3_output1.txt numbers.txt values.txt
++ sort -h
+4.0K	fruits.txt
+4.0K	linux_day3.sh
+4.0K	numbers.txt
+4.0K	values.txt
+12K	linux_day3_output.txt
+20K	linux_day3_output1.txt
+404K	Aug2026_Kunal_Hedau_Pathnex
++ echo
+
++ echo ==============================
+==============================
++ echo 'Topic: Running Processes'
+Topic: Running Processes
++ echo ==============================
+==============================
++ ps -ef
++ head
+UID          PID    PPID  C STIME TTY          TIME CMD
+root           1       0  0 16:53 ?        00:00:01 /usr/lib/systemd/systemd --switched-root --system --deserialize=32
+root           2       0  0 16:53 ?        00:00:00 [kthreadd]
+root           3       2  0 16:53 ?        00:00:00 [pool_workqueue_release]
+root           4       2  0 16:53 ?        00:00:00 [kworker/R-rcu_gp]
+root           5       2  0 16:53 ?        00:00:00 [kworker/R-sync_wq]
+root           6       2  0 16:53 ?        00:00:00 [kworker/R-kvfree_rcu_reclaim]
+root           7       2  0 16:53 ?        00:00:00 [kworker/R-slub_flushwq]
+root           8       2  0 16:53 ?        00:00:00 [kworker/R-netns]
+root           9       2  0 16:53 ?        00:00:00 [kworker/0:0-xfs-conv/nvme0n1p1]
++ top -b -n 1
++ head -20
+top - 17:18:30 up 24 min,  1 user,  load average: 0.00, 0.00, 0.00
+Tasks: 107 total,   1 running, 106 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  3.1 us,  0.0 sy,  0.0 ni, 96.9 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :    912.9 total,    491.2 free,    163.7 used,    257.9 buff/cache
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.    617.0 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+      1 root      20   0  173040  17492  10920 S   0.0   1.9   0:01.00 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kthreadd
+      3 root      20   0       0      0      0 S   0.0   0.0   0:00.00 pool_wo+
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+      7 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+      9 root      20   0       0      0      0 I   0.0   0.0   0:00.03 kworker+
+     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     13 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     14 root      20   0       0      0      0 S   0.0   0.0   0:00.02 ksoftir+
+     15 root      20   0       0      0      0 I   0.0   0.0   0:00.02 rcu_pre+
++ echo
+
++ echo ==============================
+==============================
++ echo 'Topic: System Troubleshooting'
+Topic: System Troubleshooting
++ echo ==============================
+==============================
++ uptime
+ 17:18:30 up 24 min,  1 user,  load average: 0.00, 0.00, 0.00
++ df -h
+Filesystem        Size  Used Avail Use% Mounted on
+devtmpfs          420M     0  420M   0% /dev
+tmpfs             457M     0  457M   0% /dev/shm
+tmpfs             183M  436K  183M   1% /run
+efivarfs          128K  2.7K  121K   3% /sys/firmware/efi/efivars
+/dev/nvme0n1p1    8.0G  1.8G  6.2G  22% /
+tmpfs             457M     0  457M   0% /tmp
+/dev/nvme0n1p128   10M  1.3M  8.7M  13% /boot/efi
+tmpfs              92M     0   92M   0% /run/user/1000
++ df -ih
+Filesystem       Inodes IUsed IFree IUse% Mounted on
+devtmpfs           105K   367  105K    1% /dev
+tmpfs              115K     2  115K    1% /dev/shm
+tmpfs              800K   599  800K    1% /run
+efivarfs              0     0     0     - /sys/firmware/efi/efivars
+/dev/nvme0n1p1     4.0M   50K  4.0M    2% /
+tmpfs              1.0M    17  1.0M    1% /tmp
+/dev/nvme0n1p128      0     0     0     - /boot/efi
+tmpfs               23K    16   23K    1% /run/user/1000
++ free -h
+               total        used        free      shared  buff/cache   available
+Mem:           912Mi       163Mi       491Mi       0.0Ki       257Mi       617Mi
+Swap:             0B          0B          0B
++ systemctl --failed
+  UNIT LOAD ACTIVE SUB DESCRIPTION
+0 loaded units listed.
++ ss -tulnp
+Netid State  Recv-Q Send-Q                   Local Address:Port Peer Address:PortProcess
+udp   UNCONN 0      0                            127.0.0.1:323       0.0.0.0:*          
+udp   UNCONN 0      0                    172.31.1.189%ens5:68        0.0.0.0:*          
+udp   UNCONN 0      0                                [::1]:323          [::]:*          
+udp   UNCONN 0      0      [fe80::84e:6aff:fe84:a3e3]%ens5:546          [::]:*          
+tcp   LISTEN 0      128                            0.0.0.0:22        0.0.0.0:*          
+tcp   LISTEN 0      128                               [::]:22           [::]:*          
++ echo
+
++ echo ==============================
+==============================
++ echo 'Topic: Recent Logs'
+Topic: Recent Logs
++ echo ==============================
+==============================
++ journalctl -n 20 --no-pager
+Aug 03 17:16:09 ip-172-31-1-189.ap-south-1.compute.internal ec2net[3334]: [get_meta] Querying IMDS for mac
+Aug 03 17:16:09 ip-172-31-1-189.ap-south-1.compute.internal ec2net[3334]: [get_meta] Querying IMDS for mac
+Aug 03 17:16:09 ip-172-31-1-189.ap-south-1.compute.internal ec2net[3334]: [get_meta] Querying IMDS for mac
+Aug 03 17:16:09 ip-172-31-1-189.ap-south-1.compute.internal ec2net[3334]: [get_meta] Querying IMDS for network/interfaces/macs/0a:4e:6a:84:a3:e3/local-ipv4s
+Aug 03 17:16:09 ip-172-31-1-189.ap-south-1.compute.internal systemd[1]: refresh-policy-routes@ens5.service: Deactivated successfully.
+Aug 03 17:16:09 ip-172-31-1-189.ap-south-1.compute.internal systemd[1]: Finished refresh-policy-routes@ens5.service - Refresh policy routes for ens5.
+Aug 03 17:16:09 ip-172-31-1-189.ap-south-1.compute.internal audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=refresh-policy-routes@ens5 comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Aug 03 17:16:09 ip-172-31-1-189.ap-south-1.compute.internal audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=refresh-policy-routes@ens5 comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Aug 03 17:18:09 ip-172-31-1-189.ap-south-1.compute.internal systemd[1]: Starting refresh-policy-routes@ens5.service - Refresh policy routes for ens5...
+Aug 03 17:18:09 ip-172-31-1-189.ap-south-1.compute.internal ec2net[3412]: Starting configuration refresh for ens5
+Aug 03 17:18:09 ip-172-31-1-189.ap-south-1.compute.internal ec2net[3412]: Got IMDSv2 token for interface ens5 from http://169.254.169.254/latest via ens5
+Aug 03 17:18:09 ip-172-31-1-189.ap-south-1.compute.internal ec2net[3412]: [get_meta] Querying IMDS for mac
+Aug 03 17:18:09 ip-172-31-1-189.ap-south-1.compute.internal ec2net[3412]: [get_meta] Querying IMDS for mac
+Aug 03 17:18:09 ip-172-31-1-189.ap-south-1.compute.internal ec2net[3412]: [get_meta] Querying IMDS for mac
+Aug 03 17:18:09 ip-172-31-1-189.ap-south-1.compute.internal ec2net[3412]: [get_meta] Querying IMDS for mac
+Aug 03 17:18:09 ip-172-31-1-189.ap-south-1.compute.internal ec2net[3412]: [get_meta] Querying IMDS for network/interfaces/macs/0a:4e:6a:84:a3:e3/local-ipv4s
+Aug 03 17:18:09 ip-172-31-1-189.ap-south-1.compute.internal systemd[1]: refresh-policy-routes@ens5.service: Deactivated successfully.
+Aug 03 17:18:09 ip-172-31-1-189.ap-south-1.compute.internal systemd[1]: Finished refresh-policy-routes@ens5.service - Refresh policy routes for ens5.
+Aug 03 17:18:09 ip-172-31-1-189.ap-south-1.compute.internal audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=refresh-policy-routes@ens5 comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Aug 03 17:18:09 ip-172-31-1-189.ap-south-1.compute.internal audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=refresh-policy-routes@ens5 comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
++ echo
+
++ echo ========================================================
+========================================================
++ echo 'Practice Completed'
+Practice Completed
++ echo ========================================================
+========================================================
++ exit

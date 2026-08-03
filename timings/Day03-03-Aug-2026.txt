@@ -1,0 +1,5 @@
+# What I did today
+# 2 hours - Attended Linux administration  morning session
+# Comment on Video what you learnt
+# 30 mins - Gave a 2 min talk on linux commands in evening session
+# 1 hour - Practiced Linux commands and creating daily branches and pull request
