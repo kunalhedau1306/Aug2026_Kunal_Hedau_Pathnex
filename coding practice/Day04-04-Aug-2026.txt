@@ -1,0 +1,284 @@
+[ec2-user@ip-172-31-1-189 ~]$ echo ========================================================
+========================================================
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Linux Practice - Day 4'
+Linux Practice - Day 4
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Date: 04-Aug-2026'
+Date: 04-Aug-2026
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Environment: Amazon EC2 - Amazon Linux'
+Environment: Amazon EC2 - Amazon Linux
+[ec2-user@ip-172-31-1-189 ~]$ echo ========================================================
+========================================================
+[ec2-user@ip-172-31-1-189 ~]$ echo
+
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Topic: Linux Users and Groups'
+Topic: Linux Users and Groups
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ whoami
+ec2-user
+[ec2-user@ip-172-31-1-189 ~]$ id
+uid=1000(ec2-user) gid=1000(ec2-user) groups=1000(ec2-user),4(adm),10(wheel),190(systemd-journal) context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023
+[ec2-user@ip-172-31-1-189 ~]$ groups
+ec2-user adm wheel systemd-journal
+[ec2-user@ip-172-31-1-189 ~]$ cat /etc/passwd
+[ec2-user@ip-172-31-1-189 ~]$ head -10
+root:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+operator:x:11:0:operator:/root:/sbin/nologin
+[ec2-user@ip-172-31-1-189 ~]$ cat /etc/group
+[ec2-user@ip-172-31-1-189 ~]$ head -10
+root:x:0:
+bin:x:1:
+daemon:x:2:
+sys:x:3:
+adm:x:4:ec2-user
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mem:x:8:
+kmem:x:9:
+[ec2-user@ip-172-31-1-189 ~]$ getent passwd ec2-user
+ec2-user:x:1000:1000:EC2 Default User:/home/ec2-user:/bin/bash
+[ec2-user@ip-172-31-1-189 ~]$ getent group wheel
+wheel:x:10:ec2-user
+[ec2-user@ip-172-31-1-189 ~]$ echo
+
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Topic: Create New User'
+Topic: Create New User
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ sudo useradd devuser
+[ec2-user@ip-172-31-1-189 ~]$ id devuser
+uid=1001(devuser) gid=1001(devuser) groups=1001(devuser)
+[ec2-user@ip-172-31-1-189 ~]$ grep devuser /etc/passwd
+devuser:x:1001:1001::/home/devuser:/bin/bash
+[ec2-user@ip-172-31-1-189 ~]$ echo
+
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Topic: Set Password'
+Topic: Set Password
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Run the following command to set password:'
+Run the following command to set password:
+[ec2-user@ip-172-31-1-189 ~]$ echo 'sudo passwd devuser'
+sudo passwd devuser
+[ec2-user@ip-172-31-1-189 ~]$ echo
+
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Topic: Enable Password Authentication'
+Topic: Enable Password Authentication
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ sudo grep '^PasswordAuthentication' /etc/ssh/sshd_config
+PasswordAuthentication no
+[ec2-user@ip-172-31-1-189 ~]$ echo
+
+[ec2-user@ip-172-31-1-189 ~]$ echo 'If disabled, edit:'
+If disabled, edit:
+[ec2-user@ip-172-31-1-189 ~]$ echo 'sudo vi /etc/ssh/sshd_config'
+sudo vi /etc/ssh/sshd_config
+[ec2-user@ip-172-31-1-189 ~]$ echo
+
+[ec2-user@ip-172-31-1-189 ~]$ echo Set:
+Set:
+[ec2-user@ip-172-31-1-189 ~]$ echo 'PasswordAuthentication yes'
+PasswordAuthentication yes
+[ec2-user@ip-172-31-1-189 ~]$ echo
+
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Restart SSH Service:'
+Restart SSH Service:
+[ec2-user@ip-172-31-1-189 ~]$ echo 'sudo systemctl restart sshd'
+sudo systemctl restart sshd
+[ec2-user@ip-172-31-1-189 ~]$ echo
+
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Topic: Enable SSH Login'
+Topic: Enable SSH Login
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Generate SSH Key on Client:'
+Generate SSH Key on Client:
+[ec2-user@ip-172-31-1-189 ~]$ echo ssh-keygen
+ssh-keygen
+[ec2-user@ip-172-31-1-189 ~]$ echo
+
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Copy Public Key:'
+Copy Public Key:
+[ec2-user@ip-172-31-1-189 ~]$ echo 'ssh-copy-id devuser@<EC2-PUBLIC-IP>'
+ssh-copy-id devuser@<EC2-PUBLIC-IP>
+[ec2-user@ip-172-31-1-189 ~]$ echo
+
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Or manually copy the public key to:'
+Or manually copy the public key to:
+[ec2-user@ip-172-31-1-189 ~]$ echo '~/.ssh/authorized_keys'
+~/.ssh/authorized_keys
+[ec2-user@ip-172-31-1-189 ~]$ echo
+
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Topic: Add User to wheel Group'
+Topic: Add User to wheel Group
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ sudo usermod -aG wheel devuser
+[ec2-user@ip-172-31-1-189 ~]$ id devuser
+uid=1001(devuser) gid=1001(devuser) groups=1001(devuser),10(wheel)
+[ec2-user@ip-172-31-1-189 ~]$ echo
+
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Topic: Bastion (Jump) Host'
+Topic: Bastion (Jump) Host
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Typical Architecture:'
+Typical Architecture:
+[ec2-user@ip-172-31-1-189 ~]$ echo
+
+[ec2-user@ip-172-31-1-189 ~]$ echo Internet
+Internet
+[ec2-user@ip-172-31-1-189 ~]$ echo '    |'
+    |
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Bastion Host'
+Bastion Host
+[ec2-user@ip-172-31-1-189 ~]$ echo '    |'
+    |
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Private EC2 Servers'
+Private EC2 Servers
+[ec2-user@ip-172-31-1-189 ~]$ echo
+
+[ec2-user@ip-172-31-1-189 ~]$ echo Example:
+Example:
+[ec2-user@ip-172-31-1-189 ~]$ echo 'ssh -J ec2-user@bastion-ip ec2-user@private-server'
+ssh -J ec2-user@bastion-ip ec2-user@private-server
+[ec2-user@ip-172-31-1-189 ~]$ echo
+
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Topic: chmod'
+Topic: chmod
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ mkdir -p /home/ec2-user/linux_lab
+[ec2-user@ip-172-31-1-189 ~]$ cd /home/ec2-user/linux_lab
+[ec2-user@ip-172-31-1-189 ~]$ touch file1
+[ec2-user@ip-172-31-1-189 ~]$ ls -l
+total 0
+-rw-rw-r--. 1 ec2-user ec2-user 0 Aug  4 08:02 file1
+[ec2-user@ip-172-31-1-189 ~]$ chmod 777 file1
+[ec2-user@ip-172-31-1-189 ~]$ ls -l file1
+-rwxrwxrwx. 1 ec2-user ec2-user 0 Aug  4 08:02 file1
+[ec2-user@ip-172-31-1-189 ~]$ chmod 644 file1
+[ec2-user@ip-172-31-1-189 ~]$ ls -l file1
+-rw-r--r--. 1 ec2-user ec2-user 0 Aug  4 08:02 file1
+[ec2-user@ip-172-31-1-189 ~]$ chmod u+x file1
+[ec2-user@ip-172-31-1-189 ~]$ ls -l file1
+-rwxr--r--. 1 ec2-user ec2-user 0 Aug  4 08:02 file1
+[ec2-user@ip-172-31-1-189 ~]$ chmod g+w file1
+[ec2-user@ip-172-31-1-189 ~]$ ls -l file1
+-rwxrw-r--. 1 ec2-user ec2-user 0 Aug  4 08:02 file1
+[ec2-user@ip-172-31-1-189 ~]$ chmod o-r file1
+[ec2-user@ip-172-31-1-189 ~]$ ls -l file1
+-rwxrw----. 1 ec2-user ec2-user 0 Aug  4 08:02 file1
+[ec2-user@ip-172-31-1-189 ~]$ echo
+
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Topic: chown'
+Topic: chown
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo Examples:
+Examples:
+[ec2-user@ip-172-31-1-189 ~]$ echo 'sudo chown devuser file1'
+sudo chown devuser file1
+[ec2-user@ip-172-31-1-189 ~]$ echo 'sudo chown devuser:devuser file1'
+sudo chown devuser:devuser file1
+[ec2-user@ip-172-31-1-189 ~]$ echo
+
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Topic: umask'
+Topic: umask
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ umask
+0002
+[ec2-user@ip-172-31-1-189 ~]$ touch default_file
+[ec2-user@ip-172-31-1-189 ~]$ ls -l default_file
+-rw-rw-r--. 1 ec2-user ec2-user 0 Aug  4 08:02 default_file
+[ec2-user@ip-172-31-1-189 ~]$ umask 027
+[ec2-user@ip-172-31-1-189 ~]$ touch restricted_file
+[ec2-user@ip-172-31-1-189 ~]$ ls -l restricted_file
+-rw-r-----. 1 ec2-user ec2-user 0 Aug  4 08:02 restricted_file
+[ec2-user@ip-172-31-1-189 ~]$ echo
+
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Topic: tar Compression'
+Topic: tar Compression
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ mkdir backup
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Linux Practice'
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Amazon Linux'
+[ec2-user@ip-172-31-1-189 ~]$ tar -cvf backup.tar backup
+backup/
+backup/file1.txt
+backup/file2.txt
+[ec2-user@ip-172-31-1-189 ~]$ ls -lh backup.tar
+-rw-r-----. 1 ec2-user ec2-user 10K Aug  4 08:02 backup.tar
+[ec2-user@ip-172-31-1-189 ~]$ tar -tvf backup.tar
+drwxr-x--- ec2-user/ec2-user 0 2026-08-04 08:02 backup/
+-rw-r----- ec2-user/ec2-user 15 2026-08-04 08:02 backup/file1.txt
+-rw-r----- ec2-user/ec2-user 13 2026-08-04 08:02 backup/file2.txt
+[ec2-user@ip-172-31-1-189 ~]$ tar -czvf backup.tar.gz backup
+backup/
+backup/file1.txt
+backup/file2.txt
+[ec2-user@ip-172-31-1-189 ~]$ ls -lh backup.tar.gz
+-rw-r-----. 1 ec2-user ec2-user 200 Aug  4 08:02 backup.tar.gz
+[ec2-user@ip-172-31-1-189 ~]$ mkdir extract
+[ec2-user@ip-172-31-1-189 ~]$ tar -xzvf backup.tar.gz -C extract
+backup/
+backup/file1.txt
+backup/file2.txt
+[ec2-user@ip-172-31-1-189 ~]$ ls -R extract
+extract:
+backup
+
+extract/backup:
+file1.txt  file2.txt
+[ec2-user@ip-172-31-1-189 ~]$ echo
+
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Topic: Cleanup'
+Topic: Cleanup
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ cd /home/ec2-user
+[ec2-user@ip-172-31-1-189 ~]$ rm -rf /home/ec2-user/linux_lab
+[ec2-user@ip-172-31-1-189 ~]$ echo
+
+[ec2-user@ip-172-31-1-189 ~]$ echo ========================================================
+========================================================
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Day 4 Practice Completed Successfully'
+Day 4 Practice Completed Successfully
+[ec2-user@ip-172-31-1-189 ~]$ echo ========================================================
+========================================================
