@@ -1,119 +1,121 @@
-+ echo ========================================================
+[ec2-user@ip-172-31-1-189 ~]$ echo ========================================================
 ========================================================
-+ echo 'Linux Practice - Day 3'
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Linux Practice - Day 3'
 Linux Practice - Day 3
-+ echo 'Environment: Amazon EC2 - Amazon Linux'
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Environment: Amazon EC2 - Amazon Linux'
 Environment: Amazon EC2 - Amazon Linux
-+ echo ========================================================
+[ec2-user@ip-172-31-1-189 ~]$ echo ========================================================
 ========================================================
-+ echo
+[ec2-user@ip-172-31-1-189 ~]$ echo
 
-+ echo ==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
 ==============================
-+ echo 'Topic: Absolute & Relative Path'
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Topic: Absolute & Relative Path'
 Topic: Absolute & Relative Path
-+ echo ==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
 ==============================
-+ pwd
+[ec2-user@ip-172-31-1-189 ~]$ pwd
 /home/ec2-user
-+ ls
-Aug2026_Kunal_Hedau_Pathnex
-fruits.txt
-linux_day3.sh
-linux_day3_output.txt
-linux_day3_output1.txt
-numbers.txt
-values.txt
-+ cd /tmp
-+ pwd
+[ec2-user@ip-172-31-1-189 ~]$ ls
+Aug2026_Kunal_Hedau_Pathnex  fruits.txt     linux_day2_output.txt	 linux_day3.sh		linux_day4.sh  practice_command.txt
+clean_script_output.sh	     linux_day2.sh  linux_day2_output_clean.txt  linux_day3_output.txt	numbers.txt    values.txt
+[ec2-user@ip-172-31-1-189 ~]$ cd /tmp
+[ec2-user@ip-172-31-1-189 ~]$ pwd
 /tmp
-+ cd /var/log
-+ pwd
+[ec2-user@ip-172-31-1-189 ~]$ cd /var/log
+[ec2-user@ip-172-31-1-189 ~]$ pwd
 /var/log
-+ cd ..
-+ pwd
+[ec2-user@ip-172-31-1-189 ~]$ cd ..
+[ec2-user@ip-172-31-1-189 ~]$ pwd
 /var
-+ cd /home/ec2-user
-+ pwd
+[ec2-user@ip-172-31-1-189 ~]$ cd /home/ec2-user
+[ec2-user@ip-172-31-1-189 ~]$ pwd
 /home/ec2-user
-+ echo
+[ec2-user@ip-172-31-1-189 ~]$ echo
 
-+ echo ==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
 ==============================
-+ echo 'Topic: CPU Information'
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Topic: CPU Information'
 Topic: CPU Information
-+ echo ==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
 ==============================
-+ cd
-+ nproc
+[ec2-user@ip-172-31-1-189 ~]$ cd
+[ec2-user@ip-172-31-1-189 ~]$ nproc
 2
-+ lscpu
-Architecture:                            x86_64
-CPU op-mode(s):                          32-bit, 64-bit
-Address sizes:                           46 bits physical, 48 bits virtual
-Byte Order:                              Little Endian
-CPU(s):                                  2
-On-line CPU(s) list:                     0,1
-Vendor ID:                               GenuineIntel
-Model name:                              Intel(R) Xeon(R) Platinum 8259CL CPU @ 2.50GHz
-CPU family:                              6
-Model:                                   85
-Thread(s) per core:                      2
-Core(s) per socket:                      1
-Socket(s):                               1
-Stepping:                                7
-BogoMIPS:                                5000.01
-Flags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault pti fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves ida arat pku ospke
-Hypervisor vendor:                       KVM
-Virtualization type:                     full
-L1d cache:                               32 KiB (1 instance)
-L1i cache:                               32 KiB (1 instance)
-L2 cache:                                1 MiB (1 instance)
-L3 cache:                                35.8 MiB (1 instance)
-NUMA node(s):                            1
-NUMA node0 CPU(s):                       0,1
-Vulnerability Gather data sampling:      Unknown: Dependent on hypervisor status
-Vulnerability Ghostwrite:                Not affected
-Vulnerability Indirect target selection: Mitigation; Aligned branch/return thunks
-Vulnerability Itlb multihit:             KVM: Mitigation: VMX unsupported
-Vulnerability L1tf:                      Mitigation; PTE Inversion
-Vulnerability Mds:                       Vulnerable: Clear CPU buffers attempted, no microcode; SMT Host state unknown
-Vulnerability Meltdown:                  Mitigation; PTI
-Vulnerability Mmio stale data:           Vulnerable: Clear CPU buffers attempted, no microcode; SMT Host state unknown
-Vulnerability Old microcode:             Not affected
-Vulnerability Reg file data sampling:    Not affected
-Vulnerability Retbleed:                  Vulnerable
-Vulnerability Spec rstack overflow:      Not affected
-Vulnerability Spec store bypass:         Vulnerable
-Vulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization
-Vulnerability Spectre v2:                Mitigation; Retpolines; STIBP disabled; RSB filling; PBRSB-eIBRS Not affected; BHI Retpoline
-Vulnerability Srbds:                     Not affected
-Vulnerability Tsa:                       Not affected
-Vulnerability Tsx async abort:           Not affected
-Vulnerability Vmscape:                   Not affected
-+ uptime
- 17:18:29 up 24 min,  1 user,  load average: 0.00, 0.00, 0.00
-+ echo
+[ec2-user@ip-172-31-1-189 ~]$ lscpu
+Architecture:                x86_64
+  CPU op-mode(s):            32-bit, 64-bit
+  Address sizes:             46 bits physical, 48 bits virtual
+  Byte Order:                Little Endian
+CPU(s):                      2
+  On-line CPU(s) list:       0,1
+Vendor ID:                   GenuineIntel
+  Model name:                Intel(R) Xeon(R) Platinum 8175M CPU @ 2.50GHz
+    CPU family:              6
+    Model:                   85
+    Thread(s) per core:      2
+    Core(s) per socket:      1
+    Socket(s):               1
+    Stepping:                4
+    BogoMIPS:                4999.99
+    Flags:                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc 
+                             cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault
+                              pti fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves ida arat pku 
+                             ospke
+Virtualization features:     
+  Hypervisor vendor:         KVM
+  Virtualization type:       full
+Caches (sum of all):         
+  L1d:                       32 KiB (1 instance)
+  L1i:                       32 KiB (1 instance)
+  L2:                        1 MiB (1 instance)
+  L3:                        33 MiB (1 instance)
+NUMA:                        
+  NUMA node(s):              1
+  NUMA node0 CPU(s):         0,1
+Vulnerabilities:             
+  Gather data sampling:      Unknown: Dependent on hypervisor status
+  Ghostwrite:                Not affected
+  Indirect target selection: Mitigation; Aligned branch/return thunks
+  Itlb multihit:             KVM: Mitigation: VMX unsupported
+  L1tf:                      Mitigation; PTE Inversion
+  Mds:                       Vulnerable: Clear CPU buffers attempted, no microcode; SMT Host state unknown
+  Meltdown:                  Mitigation; PTI
+  Mmio stale data:           Vulnerable: Clear CPU buffers attempted, no microcode; SMT Host state unknown
+  Old microcode:             Not affected
+  Reg file data sampling:    Not affected
+  Retbleed:                  Vulnerable
+  Spec rstack overflow:      Not affected
+  Spec store bypass:         Vulnerable
+  Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+  Spectre v2:                Mitigation; Retpolines; STIBP disabled; RSB filling; PBRSB-eIBRS Not affected; BHI Retpoline
+  Srbds:                     Not affected
+  Tsa:                       Not affected
+  Tsx async abort:           Not affected
+  Vmscape:                   Not affected
+[ec2-user@ip-172-31-1-189 ~]$ uptime
+ 07:59:03 up  7:49,  2 users,  load average: 0.00, 0.00, 0.00
+[ec2-user@ip-172-31-1-189 ~]$ echo
 
-+ echo ==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
 ==============================
-+ echo 'Topic: Memory'
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Topic: Memory'
 Topic: Memory
-+ echo ==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
 ==============================
-+ free -h
+[ec2-user@ip-172-31-1-189 ~]$ free -h
                total        used        free      shared  buff/cache   available
-Mem:           912Mi       163Mi       491Mi       0.0Ki       257Mi       617Mi
+Mem:           912Mi       161Mi       478Mi       0.0Ki       272Mi       619Mi
 Swap:             0B          0B          0B
-+ echo
+[ec2-user@ip-172-31-1-189 ~]$ echo
 
-+ echo ==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
 ==============================
-+ echo 'Topic: Disk Usage'
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Topic: Disk Usage'
 Topic: Disk Usage
-+ echo ==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
 ==============================
-+ df -h
+[ec2-user@ip-172-31-1-189 ~]$ df -h
 Filesystem        Size  Used Avail Use% Mounted on
 devtmpfs          420M     0  420M   0% /dev
 tmpfs             457M     0  457M   0% /dev/shm
@@ -123,7 +125,7 @@ efivarfs          128K  2.7K  121K   3% /sys/firmware/efi/efivars
 tmpfs             457M     0  457M   0% /tmp
 /dev/nvme0n1p128   10M  1.3M  8.7M  13% /boot/efi
 tmpfs              92M     0   92M   0% /run/user/1000
-+ df -ih
+[ec2-user@ip-172-31-1-189 ~]$ df -ih
 Filesystem       Inodes IUsed IFree IUse% Mounted on
 devtmpfs           105K   367  105K    1% /dev
 tmpfs              115K     2  115K    1% /dev/shm
@@ -133,32 +135,42 @@ efivarfs              0     0     0     - /sys/firmware/efi/efivars
 tmpfs              1.0M    17  1.0M    1% /tmp
 /dev/nvme0n1p128      0     0     0     - /boot/efi
 tmpfs               23K    16   23K    1% /run/user/1000
-+ du -sh Aug2026_Kunal_Hedau_Pathnex fruits.txt linux_day3.sh linux_day3_output.txt linux_day3_output1.txt numbers.txt values.txt
-404K	Aug2026_Kunal_Hedau_Pathnex
+[ec2-user@ip-172-31-1-189 ~]$ du -sh Aug2026_Kunal_Hedau_Pathnex clean_script_output.sh fruits.txt linux_day2.sh linux_day2_output.txt linux_day2_output_clean.txt linux_day3.sh linux_day3_output.txt linux_day4.sh numbers.txt practice_command.txt values.txt
+300K	Aug2026_Kunal_Hedau_Pathnex
+4.0K	clean_script_output.sh
 4.0K	fruits.txt
+4.0K	linux_day2.sh
+16K	linux_day2_output.txt
+16K	linux_day2_output_clean.txt
 4.0K	linux_day3.sh
-8.0K	linux_day3_output.txt
-20K	linux_day3_output1.txt
+4.0K	linux_day3_output.txt
+8.0K	linux_day4.sh
 4.0K	numbers.txt
+4.0K	practice_command.txt
 4.0K	values.txt
-+ du --inodes -sh Aug2026_Kunal_Hedau_Pathnex fruits.txt linux_day3.sh linux_day3_output.txt linux_day3_output1.txt numbers.txt values.txt
-83	Aug2026_Kunal_Hedau_Pathnex
+[ec2-user@ip-172-31-1-189 ~]$ du --inodes -sh Aug2026_Kunal_Hedau_Pathnex clean_script_output.sh fruits.txt linux_day2.sh linux_day2_output.txt linux_day2_output_clean.txt linux_day3.sh linux_day3_output.txt linux_day4.sh numbers.txt practice_command.txt values.txt
+99	Aug2026_Kunal_Hedau_Pathnex
+1	clean_script_output.sh
 1	fruits.txt
+1	linux_day2.sh
+1	linux_day2_output.txt
+1	linux_day2_output_clean.txt
 1	linux_day3.sh
 1	linux_day3_output.txt
-1	linux_day3_output1.txt
+1	linux_day4.sh
 1	numbers.txt
+1	practice_command.txt
 1	values.txt
-+ echo
+[ec2-user@ip-172-31-1-189 ~]$ echo
 
-+ echo ==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
 ==============================
-+ echo 'Topic: Head Command'
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Topic: Head Command'
 Topic: Head Command
-+ echo ==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
 ==============================
-+ seq 100
-+ head numbers.txt
+[ec2-user@ip-172-31-1-189 ~]$ seq 100
+[ec2-user@ip-172-31-1-189 ~]$ head numbers.txt
 1
 2
 3
@@ -169,21 +181,21 @@ Topic: Head Command
 8
 9
 10
-+ head -5 numbers.txt
+[ec2-user@ip-172-31-1-189 ~]$ head -5 numbers.txt
 1
 2
 3
 4
 5
-+ echo
+[ec2-user@ip-172-31-1-189 ~]$ echo
 
-+ echo ==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
 ==============================
-+ echo 'Topic: Tail Command'
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Topic: Tail Command'
 Topic: Tail Command
-+ echo ==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
 ==============================
-+ tail numbers.txt
+[ec2-user@ip-172-31-1-189 ~]$ tail numbers.txt
 91
 92
 93
@@ -194,23 +206,23 @@ Topic: Tail Command
 98
 99
 100
-+ tail -5 numbers.txt
+[ec2-user@ip-172-31-1-189 ~]$ tail -5 numbers.txt
 96
 97
 98
 99
 100
-+ echo
+[ec2-user@ip-172-31-1-189 ~]$ echo
 
-+ echo ==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
 ==============================
-+ echo 'Topic: Find Command'
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Topic: Find Command'
 Topic: Find Command
-+ echo ==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
 ==============================
-+ find . -name numbers.txt
+[ec2-user@ip-172-31-1-189 ~]$ find . -name numbers.txt
 ./numbers.txt
-+ find /etc -name '*.conf'
+[ec2-user@ip-172-31-1-189 ~]$ find /etc -name '*.conf'
 /etc/dracut.conf.d/ec2.conf
 /etc/dnf/plugins/release-notification.conf
 /etc/dnf/plugins/supportinfo.conf
@@ -296,108 +308,113 @@ find: ‘/etc/audit’: Permission denied
 /etc/man_db.conf
 /etc/cpupower-service.conf
 /etc/locale.conf
-+ find /var -type d
-+ head
+[ec2-user@ip-172-31-1-189 ~]$ find /var -type d
+[ec2-user@ip-172-31-1-189 ~]$ head
 find: ‘/var/cache/ldconfig’: Permission denied
 find: ‘/var/cache/private’: Permission denied
-find: /var
+/var
 /var/cache
 /var/cache/bpf
 /var/cache/ldconfig
 /var/cache/private
+find: ‘/var/log/private’: Permission denied
 /var/cache/krb5rcache
 /var/cache/dnf
 /var/cache/dnf/amazonlinux-eacdee170d67c224
 /var/cache/dnf/amazonlinux-eacdee170d67c224/repodata
 /var/cache/dnf/amazonlinux-eacdee170d67c224/packages
-‘/var/log/private’: Permission denied
-+ echo
+[ec2-user@ip-172-31-1-189 ~]$ echo
 
-+ echo ==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
 ==============================
-+ echo 'Topic: Sort Command'
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Topic: Sort Command'
 Topic: Sort Command
-+ echo ==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
 ==============================
-+ printf 'Orange\nApple\nBanana\nMango\n'
-+ cat fruits.txt
+[ec2-user@ip-172-31-1-189 ~]$ printf 'Orange\nApple\nBanana\nMango\n'
+[ec2-user@ip-172-31-1-189 ~]$ cat fruits.txt
 Orange
 Apple
 Banana
 Mango
-+ sort fruits.txt
+[ec2-user@ip-172-31-1-189 ~]$ sort fruits.txt
 Apple
 Banana
 Mango
 Orange
-+ printf '25\n5\n100\n12\n'
-+ sort -n values.txt
+[ec2-user@ip-172-31-1-189 ~]$ printf '25\n5\n100\n12\n'
+[ec2-user@ip-172-31-1-189 ~]$ sort -n values.txt
 5
 12
 25
 100
-+ du -sh Aug2026_Kunal_Hedau_Pathnex fruits.txt linux_day3.sh linux_day3_output.txt linux_day3_output1.txt numbers.txt values.txt
-+ sort -h
+[ec2-user@ip-172-31-1-189 ~]$ du -sh Aug2026_Kunal_Hedau_Pathnex clean_script_output.sh fruits.txt linux_day2.sh linux_day2_output.txt linux_day2_output_clean.txt linux_day3.sh linux_day3_output.txt linux_day4.sh numbers.txt practice_command.txt values.txt
+[ec2-user@ip-172-31-1-189 ~]$ sort -h
+4.0K	clean_script_output.sh
 4.0K	fruits.txt
+4.0K	linux_day2.sh
 4.0K	linux_day3.sh
 4.0K	numbers.txt
+4.0K	practice_command.txt
 4.0K	values.txt
+8.0K	linux_day4.sh
 12K	linux_day3_output.txt
-20K	linux_day3_output1.txt
-404K	Aug2026_Kunal_Hedau_Pathnex
-+ echo
+16K	linux_day2_output.txt
+16K	linux_day2_output_clean.txt
+300K	Aug2026_Kunal_Hedau_Pathnex
+[ec2-user@ip-172-31-1-189 ~]$ echo
 
-+ echo ==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
 ==============================
-+ echo 'Topic: Running Processes'
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Topic: Running Processes'
 Topic: Running Processes
-+ echo ==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
 ==============================
-+ ps -ef
-+ head
+[ec2-user@ip-172-31-1-189 ~]$ ps -ef
+[ec2-user@ip-172-31-1-189 ~]$ head
 UID          PID    PPID  C STIME TTY          TIME CMD
-root           1       0  0 16:53 ?        00:00:01 /usr/lib/systemd/systemd --switched-root --system --deserialize=32
-root           2       0  0 16:53 ?        00:00:00 [kthreadd]
-root           3       2  0 16:53 ?        00:00:00 [pool_workqueue_release]
-root           4       2  0 16:53 ?        00:00:00 [kworker/R-rcu_gp]
-root           5       2  0 16:53 ?        00:00:00 [kworker/R-sync_wq]
-root           6       2  0 16:53 ?        00:00:00 [kworker/R-kvfree_rcu_reclaim]
-root           7       2  0 16:53 ?        00:00:00 [kworker/R-slub_flushwq]
-root           8       2  0 16:53 ?        00:00:00 [kworker/R-netns]
-root           9       2  0 16:53 ?        00:00:00 [kworker/0:0-xfs-conv/nvme0n1p1]
-+ top -b -n 1
-+ head -20
-top - 17:18:30 up 24 min,  1 user,  load average: 0.00, 0.00, 0.00
-Tasks: 107 total,   1 running, 106 sleeping,   0 stopped,   0 zombie
-%Cpu(s):  3.1 us,  0.0 sy,  0.0 ni, 96.9 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
-MiB Mem :    912.9 total,    491.2 free,    163.7 used,    257.9 buff/cache
-MiB Swap:      0.0 total,      0.0 free,      0.0 used.    617.0 avail Mem 
+root           1       0  0 00:09 ?        00:00:02 /usr/lib/systemd/systemd --switched-root --system --deserialize=32
+root           2       0  0 00:09 ?        00:00:00 [kthreadd]
+root           3       2  0 00:09 ?        00:00:00 [pool_workqueue_release]
+root           4       2  0 00:09 ?        00:00:00 [kworker/R-rcu_gp]
+root           5       2  0 00:09 ?        00:00:00 [kworker/R-sync_wq]
+root           6       2  0 00:09 ?        00:00:00 [kworker/R-kvfree_rcu_reclaim]
+root           7       2  0 00:09 ?        00:00:00 [kworker/R-slub_flushwq]
+root           8       2  0 00:09 ?        00:00:00 [kworker/R-netns]
+root          10       2  0 00:09 ?        00:00:00 [kworker/0:0H-events_highpri]
+[ec2-user@ip-172-31-1-189 ~]$ top -b -n 1
+[ec2-user@ip-172-31-1-189 ~]$ head -20
+top - 07:59:03 up  7:49,  2 users,  load average: 0.00, 0.00, 0.00
+Tasks: 108 total,   1 running, 107 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :    912.9 total,    478.6 free,    161.4 used,    272.8 buff/cache
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.    619.2 avail Mem 
 
     PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
-      1 root      20   0  173040  17492  10920 S   0.0   1.9   0:01.00 systemd
-      2 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kthreadd
-      3 root      20   0       0      0      0 S   0.0   0.0   0:00.00 pool_wo+
-      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
-      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
-      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
-      7 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
-      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
-      9 root      20   0       0      0      0 I   0.0   0.0   0:00.03 kworker+
-     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
-     13 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
-     14 root      20   0       0      0      0 S   0.0   0.0   0:00.02 ksoftir+
-     15 root      20   0       0      0      0 I   0.0   0.0   0:00.02 rcu_pre+
-+ echo
+      1 root      20   0  173252  17588  10868 S   0.0   1.9   0:02.61 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kthreadd
+      3 root      20   0       0      0      0 S   0.0   0.0   0:00.00 pool_workqueue_release
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-rcu_gp
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-sync_wq
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-kvfree_rcu_reclaim
+      7 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-slub_flushwq
+      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-netns
+     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/0:0H-events_highpri
+     13 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-mm_percpu_wq
+     14 root      20   0       0      0      0 S   0.0   0.0   0:00.10 ksoftirqd/0
+     15 root      20   0       0      0      0 I   0.0   0.0   0:00.40 rcu_preempt
+     16 root      20   0       0      0      0 S   0.0   0.0   0:00.00 rcu_exp_par_gp_kthread_worker/0
+[ec2-user@ip-172-31-1-189 ~]$ echo
 
-+ echo ==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
 ==============================
-+ echo 'Topic: System Troubleshooting'
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Topic: System Troubleshooting'
 Topic: System Troubleshooting
-+ echo ==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
 ==============================
-+ uptime
- 17:18:30 up 24 min,  1 user,  load average: 0.00, 0.00, 0.00
-+ df -h
+[ec2-user@ip-172-31-1-189 ~]$ uptime
+ 07:59:03 up  7:49,  2 users,  load average: 0.00, 0.00, 0.00
+[ec2-user@ip-172-31-1-189 ~]$ df -h
 Filesystem        Size  Used Avail Use% Mounted on
 devtmpfs          420M     0  420M   0% /dev
 tmpfs             457M     0  457M   0% /dev/shm
@@ -407,7 +424,7 @@ efivarfs          128K  2.7K  121K   3% /sys/firmware/efi/efivars
 tmpfs             457M     0  457M   0% /tmp
 /dev/nvme0n1p128   10M  1.3M  8.7M  13% /boot/efi
 tmpfs              92M     0   92M   0% /run/user/1000
-+ df -ih
+[ec2-user@ip-172-31-1-189 ~]$ df -ih
 Filesystem       Inodes IUsed IFree IUse% Mounted on
 devtmpfs           105K   367  105K    1% /dev
 tmpfs              115K     2  115K    1% /dev/shm
@@ -417,56 +434,55 @@ efivarfs              0     0     0     - /sys/firmware/efi/efivars
 tmpfs              1.0M    17  1.0M    1% /tmp
 /dev/nvme0n1p128      0     0     0     - /boot/efi
 tmpfs               23K    16   23K    1% /run/user/1000
-+ free -h
+[ec2-user@ip-172-31-1-189 ~]$ free -h
                total        used        free      shared  buff/cache   available
-Mem:           912Mi       163Mi       491Mi       0.0Ki       257Mi       617Mi
+Mem:           912Mi       161Mi       478Mi       0.0Ki       272Mi       619Mi
 Swap:             0B          0B          0B
-+ systemctl --failed
-  UNIT LOAD ACTIVE SUB DESCRIPTION
+[ec2-user@ip-172-31-1-189 ~]$ systemctl --failed
+=  UNIT LOAD ACTIVE SUB DESCRIPTION
 0 loaded units listed.
-+ ss -tulnp
-Netid State  Recv-Q Send-Q                   Local Address:Port Peer Address:PortProcess
-udp   UNCONN 0      0                            127.0.0.1:323       0.0.0.0:*          
-udp   UNCONN 0      0                    172.31.1.189%ens5:68        0.0.0.0:*          
-udp   UNCONN 0      0                                [::1]:323          [::]:*          
-udp   UNCONN 0      0      [fe80::84e:6aff:fe84:a3e3]%ens5:546          [::]:*          
-tcp   LISTEN 0      128                            0.0.0.0:22        0.0.0.0:*          
-tcp   LISTEN 0      128                               [::]:22           [::]:*          
-+ echo
+>[ec2-user@ip-172-31-1-189 ~]$ ss -tulnp
+Netid              State               Recv-Q              Send-Q                                               Local Address:Port                             Peer Address:Port              Process              
+udp                UNCONN              0                   0                                                172.31.1.189%ens5:68                                    0.0.0.0:*                                      
+udp                UNCONN              0                   0                                                        127.0.0.1:323                                   0.0.0.0:*                                      
+udp                UNCONN              0                   0                                                            [::1]:323                                      [::]:*                                      
+udp                UNCONN              0                   0                                  [fe80::84e:6aff:fe84:a3e3]%ens5:546                                      [::]:*                                      
+tcp                LISTEN              0                   128                                                        0.0.0.0:22                                    0.0.0.0:*                                      
+tcp                LISTEN              0                   128                                                           [::]:22                                       [::]:*                                      
+[ec2-user@ip-172-31-1-189 ~]$ echo
 
-+ echo ==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
 ==============================
-+ echo 'Topic: Recent Logs'
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Topic: Recent Logs'
 Topic: Recent Logs
-+ echo ==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
 ==============================
-+ journalctl -n 20 --no-pager
-Aug 03 17:16:09 ip-172-31-1-189.ap-south-1.compute.internal ec2net[3334]: [get_meta] Querying IMDS for mac
-Aug 03 17:16:09 ip-172-31-1-189.ap-south-1.compute.internal ec2net[3334]: [get_meta] Querying IMDS for mac
-Aug 03 17:16:09 ip-172-31-1-189.ap-south-1.compute.internal ec2net[3334]: [get_meta] Querying IMDS for mac
-Aug 03 17:16:09 ip-172-31-1-189.ap-south-1.compute.internal ec2net[3334]: [get_meta] Querying IMDS for network/interfaces/macs/0a:4e:6a:84:a3:e3/local-ipv4s
-Aug 03 17:16:09 ip-172-31-1-189.ap-south-1.compute.internal systemd[1]: refresh-policy-routes@ens5.service: Deactivated successfully.
-Aug 03 17:16:09 ip-172-31-1-189.ap-south-1.compute.internal systemd[1]: Finished refresh-policy-routes@ens5.service - Refresh policy routes for ens5.
-Aug 03 17:16:09 ip-172-31-1-189.ap-south-1.compute.internal audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=refresh-policy-routes@ens5 comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
-Aug 03 17:16:09 ip-172-31-1-189.ap-south-1.compute.internal audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=refresh-policy-routes@ens5 comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
-Aug 03 17:18:09 ip-172-31-1-189.ap-south-1.compute.internal systemd[1]: Starting refresh-policy-routes@ens5.service - Refresh policy routes for ens5...
-Aug 03 17:18:09 ip-172-31-1-189.ap-south-1.compute.internal ec2net[3412]: Starting configuration refresh for ens5
-Aug 03 17:18:09 ip-172-31-1-189.ap-south-1.compute.internal ec2net[3412]: Got IMDSv2 token for interface ens5 from http://169.254.169.254/latest via ens5
-Aug 03 17:18:09 ip-172-31-1-189.ap-south-1.compute.internal ec2net[3412]: [get_meta] Querying IMDS for mac
-Aug 03 17:18:09 ip-172-31-1-189.ap-south-1.compute.internal ec2net[3412]: [get_meta] Querying IMDS for mac
-Aug 03 17:18:09 ip-172-31-1-189.ap-south-1.compute.internal ec2net[3412]: [get_meta] Querying IMDS for mac
-Aug 03 17:18:09 ip-172-31-1-189.ap-south-1.compute.internal ec2net[3412]: [get_meta] Querying IMDS for mac
-Aug 03 17:18:09 ip-172-31-1-189.ap-south-1.compute.internal ec2net[3412]: [get_meta] Querying IMDS for network/interfaces/macs/0a:4e:6a:84:a3:e3/local-ipv4s
-Aug 03 17:18:09 ip-172-31-1-189.ap-south-1.compute.internal systemd[1]: refresh-policy-routes@ens5.service: Deactivated successfully.
-Aug 03 17:18:09 ip-172-31-1-189.ap-south-1.compute.internal systemd[1]: Finished refresh-policy-routes@ens5.service - Refresh policy routes for ens5.
-Aug 03 17:18:09 ip-172-31-1-189.ap-south-1.compute.internal audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=refresh-policy-routes@ens5 comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
-Aug 03 17:18:09 ip-172-31-1-189.ap-south-1.compute.internal audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=refresh-policy-routes@ens5 comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
-+ echo
+[ec2-user@ip-172-31-1-189 ~]$ journalctl -n 20 --no-pager
+Aug 04 07:56:55 ip-172-31-1-189.ap-south-1.compute.internal ec2net[17668]: [get_meta] Querying IMDS for mac
+Aug 04 07:56:55 ip-172-31-1-189.ap-south-1.compute.internal ec2net[17668]: [get_meta] Querying IMDS for mac
+Aug 04 07:56:55 ip-172-31-1-189.ap-south-1.compute.internal ec2net[17668]: [get_meta] Querying IMDS for mac
+Aug 04 07:56:55 ip-172-31-1-189.ap-south-1.compute.internal ec2net[17668]: [get_meta] Querying IMDS for network/interfaces/macs/0a:4e:6a:84:a3:e3/local-ipv4s
+Aug 04 07:56:55 ip-172-31-1-189.ap-south-1.compute.internal systemd[1]: refresh-policy-routes@ens5.service: Deactivated successfully.
+Aug 04 07:56:55 ip-172-31-1-189.ap-south-1.compute.internal systemd[1]: Finished refresh-policy-routes@ens5.service - Refresh policy routes for ens5.
+Aug 04 07:56:55 ip-172-31-1-189.ap-south-1.compute.internal audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=refresh-policy-routes@ens5 comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Aug 04 07:56:55 ip-172-31-1-189.ap-south-1.compute.internal audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=refresh-policy-routes@ens5 comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Aug 04 07:58:55 ip-172-31-1-189.ap-south-1.compute.internal systemd[1]: Starting refresh-policy-routes@ens5.service - Refresh policy routes for ens5...
+Aug 04 07:58:55 ip-172-31-1-189.ap-south-1.compute.internal ec2net[17746]: Starting configuration refresh for ens5
+Aug 04 07:58:55 ip-172-31-1-189.ap-south-1.compute.internal ec2net[17746]: Got IMDSv2 token for interface ens5 from http://169.254.169.254/latest via ens5
+Aug 04 07:58:55 ip-172-31-1-189.ap-south-1.compute.internal ec2net[17746]: [get_meta] Querying IMDS for mac
+Aug 04 07:58:55 ip-172-31-1-189.ap-south-1.compute.internal ec2net[17746]: [get_meta] Querying IMDS for mac
+Aug 04 07:58:55 ip-172-31-1-189.ap-south-1.compute.internal ec2net[17746]: [get_meta] Querying IMDS for mac
+Aug 04 07:58:55 ip-172-31-1-189.ap-south-1.compute.internal ec2net[17746]: [get_meta] Querying IMDS for mac
+Aug 04 07:58:55 ip-172-31-1-189.ap-south-1.compute.internal ec2net[17746]: [get_meta] Querying IMDS for network/interfaces/macs/0a:4e:6a:84:a3:e3/local-ipv4s
+Aug 04 07:58:55 ip-172-31-1-189.ap-south-1.compute.internal systemd[1]: refresh-policy-routes@ens5.service: Deactivated successfully.
+Aug 04 07:58:55 ip-172-31-1-189.ap-south-1.compute.internal systemd[1]: Finished refresh-policy-routes@ens5.service - Refresh policy routes for ens5.
+Aug 04 07:58:55 ip-172-31-1-189.ap-south-1.compute.internal audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=refresh-policy-routes@ens5 comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Aug 04 07:58:55 ip-172-31-1-189.ap-south-1.compute.internal audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=refresh-policy-routes@ens5 comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[ec2-user@ip-172-31-1-189 ~]$ echo
 
-+ echo ========================================================
+[ec2-user@ip-172-31-1-189 ~]$ echo ========================================================
 ========================================================
-+ echo 'Practice Completed'
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Practice Completed'
 Practice Completed
-+ echo ========================================================
+[ec2-user@ip-172-31-1-189 ~]$ echo ========================================================
 ========================================================
-+ exit
