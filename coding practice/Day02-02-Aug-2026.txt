@@ -1,0 +1,340 @@
+[ec2-user@ip-172-31-1-189 ~]$ echo ========================================================
+========================================================
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Linux Practice - Day 2'
+Linux Practice - Day 2
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Date: 02-Aug-2026'
+Date: 02-Aug-2026
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Environment: Amazon EC2 - Amazon Linux'
+Environment: Amazon EC2 - Amazon Linux
+[ec2-user@ip-172-31-1-189 ~]$ echo ========================================================
+========================================================
+[ec2-user@ip-172-31-1-189 ~]$ echo
+
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Topic: Basic Linux Commands'
+Topic: Basic Linux Commands
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ pwd
+/home/ec2-user
+[ec2-user@ip-172-31-1-189 ~]$ whoami
+ec2-user
+[ec2-user@ip-172-31-1-189 ~]$ hostname
+ip-172-31-1-189.ap-south-1.compute.internal
+[ec2-user@ip-172-31-1-189 ~]$ date
+Tue Aug  4 07:50:49 UTC 2026
+[ec2-user@ip-172-31-1-189 ~]$ uptime
+ 07:50:49 up  7:41,  2 users,  load average: 0.00, 0.00, 0.00
+[ec2-user@ip-172-31-1-189 ~]$ cal
+     August 2026    
+Su Mo Tu We Th Fr Sa
+                   1
+ 2  3  4  5  6  7  8
+ 9 10 11 12 13 14 15
+16 17 18 19 20 21 22
+23 24 25 26 27 28 29
+30 31               
+[ec2-user@ip-172-31-1-189 ~]$ ls
+Aug2026_Kunal_Hedau_Pathnex  clean_script_output.sh  fruits.txt  linux_day2.sh	linux_day2_output.txt  linux_day3.sh  linux_day4.sh  numbers.txt  practice_command.txt	values.txt
+[ec2-user@ip-172-31-1-189 ~]$ ls -l
+total 36
+drwxr-xr-x. 5 ec2-user ec2-user   56 Aug  2 03:53 Aug2026_Kunal_Hedau_Pathnex
+-rwxr-xr-x. 1 ec2-user ec2-user  878 Aug  4 00:34 clean_script_output.sh
+-rw-rw-r--. 1 ec2-user ec2-user   26 Aug  4 00:49 fruits.txt
+-rwxr-xr-x. 1 ec2-user ec2-user 3990 Aug  4 07:50 linux_day2.sh
+-rw-r--r--. 1 ec2-user ec2-user    0 Aug  4 07:50 linux_day2_output.txt
+-rwxr-xr-x. 1 ec2-user ec2-user 2249 Aug  4 00:48 linux_day3.sh
+-rwxr-xr-x. 1 ec2-user ec2-user 5591 Aug  4 07:38 linux_day4.sh
+-rw-rw-r--. 1 ec2-user ec2-user  292 Aug  4 00:49 numbers.txt
+-rw-r--r--. 1 ec2-user ec2-user   49 Aug  3 17:21 practice_command.txt
+-rw-rw-r--. 1 ec2-user ec2-user   12 Aug  4 00:49 values.txt
+[ec2-user@ip-172-31-1-189 ~]$ ls -la
+total 108
+drwx------. 6 ec2-user ec2-user 16384 Aug  4 07:50 .
+drwxr-xr-x. 3 root     root        22 Aug  1 05:22 ..
+-rw-------. 1 ec2-user ec2-user  8432 Aug  4 03:15 .bash_history
+-rw-r--r--. 1 ec2-user ec2-user    18 Jan 28  2023 .bash_logout
+-rw-r--r--. 1 ec2-user ec2-user   141 Jan 28  2023 .bash_profile
+-rw-r--r--. 1 ec2-user ec2-user   492 Jan 28  2023 .bashrc
+drwx------. 3 ec2-user ec2-user    20 Aug  3 16:48 .config
+-rw-r--r--. 1 ec2-user ec2-user   160 Aug  4 01:01 .gitconfig
+-rw-------. 1 ec2-user ec2-user    20 Aug  4 00:49 .lesshst
+drwx------. 2 ec2-user ec2-user   111 Aug  4 02:11 .ssh
+drwxr-xr-x. 2 ec2-user ec2-user    24 Aug  2 03:30 .vim
+-rw-------. 1 ec2-user ec2-user 22756 Aug  4 07:50 .viminfo
+drwxr-xr-x. 5 ec2-user ec2-user    56 Aug  2 03:53 Aug2026_Kunal_Hedau_Pathnex
+-rwxr-xr-x. 1 ec2-user ec2-user   878 Aug  4 00:34 clean_script_output.sh
+-rw-rw-r--. 1 ec2-user ec2-user    26 Aug  4 00:49 fruits.txt
+-rwxr-xr-x. 1 ec2-user ec2-user  3990 Aug  4 07:50 linux_day2.sh
+-rw-r--r--. 1 ec2-user ec2-user     0 Aug  4 07:50 linux_day2_output.txt
+-rwxr-xr-x. 1 ec2-user ec2-user  2249 Aug  4 00:48 linux_day3.sh
+-rwxr-xr-x. 1 ec2-user ec2-user  5591 Aug  4 07:38 linux_day4.sh
+-rw-rw-r--. 1 ec2-user ec2-user   292 Aug  4 00:49 numbers.txt
+-rw-r--r--. 1 ec2-user ec2-user    49 Aug  3 17:21 practice_command.txt
+-rw-rw-r--. 1 ec2-user ec2-user    12 Aug  4 00:49 values.txt
+[ec2-user@ip-172-31-1-189 ~]$ mkdir linux_practice
+[ec2-user@ip-172-31-1-189 ~]$ cd linux_practice
+[ec2-user@ip-172-31-1-189 ~]$ pwd
+/home/ec2-user/linux_practice
+[ec2-user@ip-172-31-1-189 ~]$ touch file1.txt
+[ec2-user@ip-172-31-1-189 ~]$ touch file2.txt
+[ec2-user@ip-172-31-1-189 ~]$ mkdir dir1
+[ec2-user@ip-172-31-1-189 ~]$ ls -l
+total 0
+drwxrwxr-x. 2 ec2-user ec2-user 6 Aug  4 07:50 dir1
+-rw-rw-r--. 1 ec2-user ec2-user 0 Aug  4 07:50 file1.txt
+-rw-rw-r--. 1 ec2-user ec2-user 0 Aug  4 07:50 file2.txt
+[ec2-user@ip-172-31-1-189 ~]$ cp file1.txt copy_file1.txt
+[ec2-user@ip-172-31-1-189 ~]$ mv file2.txt renamed_file2.txt
+[ec2-user@ip-172-31-1-189 ~]$ ls -l
+total 0
+-rw-rw-r--. 1 ec2-user ec2-user 0 Aug  4 07:50 copy_file1.txt
+drwxrwxr-x. 2 ec2-user ec2-user 6 Aug  4 07:50 dir1
+-rw-rw-r--. 1 ec2-user ec2-user 0 Aug  4 07:50 file1.txt
+-rw-rw-r--. 1 ec2-user ec2-user 0 Aug  4 07:50 renamed_file2.txt
+[ec2-user@ip-172-31-1-189 ~]$ rm copy_file1.txt
+[ec2-user@ip-172-31-1-189 ~]$ ls -l
+total 0
+drwxrwxr-x. 2 ec2-user ec2-user 6 Aug  4 07:50 dir1
+-rw-rw-r--. 1 ec2-user ec2-user 0 Aug  4 07:50 file1.txt
+-rw-rw-r--. 1 ec2-user ec2-user 0 Aug  4 07:50 renamed_file2.txt
+[ec2-user@ip-172-31-1-189 ~]$ cd ..
+[ec2-user@ip-172-31-1-189 ~]$ rm -rf linux_practice
+[ec2-user@ip-172-31-1-189 ~]$ echo
+
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Topic: File Viewing Commands'
+Topic: File Viewing Commands
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ cd
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Linux Practice'
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Amazon Linux EC2'
+[ec2-user@ip-172-31-1-189 ~]$ echo 'DevOps Learning'
+[ec2-user@ip-172-31-1-189 ~]$ cat sample.txt
+Linux Practice
+Amazon Linux EC2
+DevOps Learning
+[ec2-user@ip-172-31-1-189 ~]$ more sample.txt
+Linux Practice
+Amazon Linux EC2
+DevOps Learning
+[ec2-user@ip-172-31-1-189 ~]$ less sample.txt
+Linux Practice
+Amazon Linux EC2
+DevOps Learning
+[ec2-user@ip-172-31-1-189 ~]$ head sample.txt
+Linux Practice
+Amazon Linux EC2
+DevOps Learning
+[ec2-user@ip-172-31-1-189 ~]$ tail sample.txt
+Linux Practice
+Amazon Linux EC2
+DevOps Learning
+[ec2-user@ip-172-31-1-189 ~]$ wc sample.txt
+ 3  7 48 sample.txt
+[ec2-user@ip-172-31-1-189 ~]$ echo
+
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Topic: Directory Commands'
+Topic: Directory Commands
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ pwd
+/home/ec2-user
+[ec2-user@ip-172-31-1-189 ~]$ cd /tmp
+[ec2-user@ip-172-31-1-189 ~]$ pwd
+/tmp
+[ec2-user@ip-172-31-1-189 ~]$ cd /var
+[ec2-user@ip-172-31-1-189 ~]$ pwd
+/var
+[ec2-user@ip-172-31-1-189 ~]$ cd /home
+[ec2-user@ip-172-31-1-189 ~]$ pwd
+/home
+[ec2-user@ip-172-31-1-189 ~]$ cd /home/ec2-user
+[ec2-user@ip-172-31-1-189 ~]$ pwd
+/home/ec2-user
+[ec2-user@ip-172-31-1-189 ~]$ echo
+
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Topic: System Information'
+Topic: System Information
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ uname -a
+Linux ip-172-31-1-189.ap-south-1.compute.internal 6.18.38-76.139.amzn2023.x86_64 #2 SMP PREEMPT_DYNAMIC Fri Jul 24 13:38:05 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+[ec2-user@ip-172-31-1-189 ~]$ cat /etc/os-release
+NAME="Amazon Linux"
+VERSION="2023"
+ID="amzn"
+ID_LIKE="fedora"
+VERSION_ID="2023"
+PLATFORM_ID="platform:al2023"
+PRETTY_NAME="Amazon Linux 2023.12.20260727"
+ANSI_COLOR="0;33"
+CPE_NAME="cpe:2.3:o:amazon:amazon_linux:2023"
+HOME_URL="https://aws.amazon.com/linux/amazon-linux-2023/"
+DOCUMENTATION_URL="https://docs.aws.amazon.com/linux/"
+SUPPORT_URL="https://aws.amazon.com/premiumsupport/"
+BUG_REPORT_URL="https://github.com/amazonlinux/amazon-linux-2023"
+VENDOR_NAME="AWS"
+VENDOR_URL="https://aws.amazon.com/"
+SUPPORT_END="2029-06-30"
+[ec2-user@ip-172-31-1-189 ~]$ hostnamectl
+ Static hostname: ip-172-31-1-189.ap-south-1.compute.internal
+       Icon name: computer-vm
+         Chassis: vm 🖴
+      Machine ID: ec25251092f5b00875d3c02e7bb2e05a
+         Boot ID: bf8e596daeb342cd86128a8d26a8e2c2
+  Virtualization: amazon
+Operating System: Amazon Linux 2023.12.20260727
+     CPE OS Name: cpe:2.3:o:amazon:amazon_linux:2023
+          Kernel: Linux 6.18.38-76.139.amzn2023.x86_64
+    Architecture: x86-64
+ Hardware Vendor: Amazon EC2
+  Hardware Model: t3.micro
+Firmware Version: 1.0
+[ec2-user@ip-172-31-1-189 ~]$ df -h
+Filesystem        Size  Used Avail Use% Mounted on
+devtmpfs          420M     0  420M   0% /dev
+tmpfs             457M     0  457M   0% /dev/shm
+tmpfs             183M  448K  183M   1% /run
+efivarfs          128K  2.7K  121K   3% /sys/firmware/efi/efivars
+/dev/nvme0n1p1    8.0G  1.8G  6.2G  22% /
+tmpfs             457M     0  457M   0% /tmp
+/dev/nvme0n1p128   10M  1.3M  8.7M  13% /boot/efi
+tmpfs              92M     0   92M   0% /run/user/1000
+[ec2-user@ip-172-31-1-189 ~]$ free -h
+               total        used        free      shared  buff/cache   available
+Mem:           912Mi       153Mi       486Mi       0.0Ki       272Mi       627Mi
+Swap:             0B          0B          0B
+[ec2-user@ip-172-31-1-189 ~]$ nproc
+2
+[ec2-user@ip-172-31-1-189 ~]$ lscpu
+Architecture:                x86_64
+  CPU op-mode(s):            32-bit, 64-bit
+  Address sizes:             46 bits physical, 48 bits virtual
+  Byte Order:                Little Endian
+CPU(s):                      2
+  On-line CPU(s) list:       0,1
+Vendor ID:                   GenuineIntel
+  Model name:                Intel(R) Xeon(R) Platinum 8175M CPU @ 2.50GHz
+    CPU family:              6
+    Model:                   85
+    Thread(s) per core:      2
+    Core(s) per socket:      1
+    Socket(s):               1
+    Stepping:                4
+    BogoMIPS:                4999.99
+    Flags:                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc 
+                             cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault
+                              pti fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves ida arat pku 
+                             ospke
+Virtualization features:     
+  Hypervisor vendor:         KVM
+  Virtualization type:       full
+Caches (sum of all):         
+  L1d:                       32 KiB (1 instance)
+  L1i:                       32 KiB (1 instance)
+  L2:                        1 MiB (1 instance)
+  L3:                        33 MiB (1 instance)
+NUMA:                        
+  NUMA node(s):              1
+  NUMA node0 CPU(s):         0,1
+Vulnerabilities:             
+  Gather data sampling:      Unknown: Dependent on hypervisor status
+  Ghostwrite:                Not affected
+  Indirect target selection: Mitigation; Aligned branch/return thunks
+  Itlb multihit:             KVM: Mitigation: VMX unsupported
+  L1tf:                      Mitigation; PTE Inversion
+  Mds:                       Vulnerable: Clear CPU buffers attempted, no microcode; SMT Host state unknown
+  Meltdown:                  Mitigation; PTI
+  Mmio stale data:           Vulnerable: Clear CPU buffers attempted, no microcode; SMT Host state unknown
+  Old microcode:             Not affected
+  Reg file data sampling:    Not affected
+  Retbleed:                  Vulnerable
+  Spec rstack overflow:      Not affected
+  Spec store bypass:         Vulnerable
+  Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+  Spectre v2:                Mitigation; Retpolines; STIBP disabled; RSB filling; PBRSB-eIBRS Not affected; BHI Retpoline
+  Srbds:                     Not affected
+  Tsa:                       Not affected
+  Tsx async abort:           Not affected
+  Vmscape:                   Not affected
+[ec2-user@ip-172-31-1-189 ~]$ echo
+
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Topic: Create EC2 Linux VM in AWS'
+Topic: Create EC2 Linux VM in AWS
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Step 1 : Login to AWS Console'
+Step 1 : Login to AWS Console
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Step 2 : Search for EC2 Service'
+Step 2 : Search for EC2 Service
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Step 3 : Click Launch Instance'
+Step 3 : Click Launch Instance
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Step 4 : Enter Instance Name'
+Step 4 : Enter Instance Name
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Step 5 : Select Amazon Linux 2023 AMI'
+Step 5 : Select Amazon Linux 2023 AMI
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Step 6 : Select t2.micro (Free Tier)'
+Step 6 : Select t2.micro (Free Tier)
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Step 7 : Create or Select Existing Key Pair'
+Step 7 : Create or Select Existing Key Pair
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Step 8 : Allow SSH (Port 22)'
+Step 8 : Allow SSH (Port 22)
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Step 9 : Launch Instance'
+Step 9 : Launch Instance
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Step 10: Wait until Instance State = Running'
+Step 10: Wait until Instance State = Running
+[ec2-user@ip-172-31-1-189 ~]$ echo
+
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Topic: Connect to EC2 Linux VM'
+Topic: Connect to EC2 Linux VM
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo Linux/macOS:
+Linux/macOS:
+[ec2-user@ip-172-31-1-189 ~]$ echo 'ssh -i mykey.pem ec2-user@<PUBLIC-IP>'
+ssh -i mykey.pem ec2-user@<PUBLIC-IP>
+[ec2-user@ip-172-31-1-189 ~]$ echo
+
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Windows PowerShell:'
+Windows PowerShell:
+[ec2-user@ip-172-31-1-189 ~]$ echo 'ssh -i mykey.pem ec2-user@<PUBLIC-IP>'
+ssh -i mykey.pem ec2-user@<PUBLIC-IP>
+[ec2-user@ip-172-31-1-189 ~]$ echo
+
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Verify Connection'
+Verify Connection
+[ec2-user@ip-172-31-1-189 ~]$ hostname
+ip-172-31-1-189.ap-south-1.compute.internal
+[ec2-user@ip-172-31-1-189 ~]$ whoami
+ec2-user
+[ec2-user@ip-172-31-1-189 ~]$ pwd
+/home/ec2-user
+[ec2-user@ip-172-31-1-189 ~]$ echo
+
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Topic: Cleanup'
+Topic: Cleanup
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ rm -f sample.txt
+[ec2-user@ip-172-31-1-189 ~]$ echo
+
+[ec2-user@ip-172-31-1-189 ~]$ echo ========================================================
+========================================================
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Day 2 Practice Completed Successfully'
+Day 2 Practice Completed Successfully
+[ec2-user@ip-172-31-1-189 ~]$ echo ========================================================
+========================================================
