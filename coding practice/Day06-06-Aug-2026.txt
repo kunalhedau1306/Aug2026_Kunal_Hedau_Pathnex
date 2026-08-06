@@ -1,0 +1,140 @@
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Linux Practice - Day 6 Complete Git Lab'
+Linux Practice - Day 6 Complete Git Lab
+[ec2-user@ip-172-31-1-189 ~]$ git --version
+git version 2.50.1
+[ec2-user@ip-172-31-1-189 ~]$ git config --global user.name 'Kunal Hedau'
+[ec2-user@ip-172-31-1-189 ~]$ git config --global user.email kunal.hedau@gmail.com
+[ec2-user@ip-172-31-1-189 ~]$ mkdir -p /home/ec2-user/git-lab
+[ec2-user@ip-172-31-1-189 ~]$ cd /home/ec2-user/git-lab
+[ec2-user@ip-172-31-1-189 ~]$ git init
+Initialized empty Git repository in /home/ec2-user/git-lab/.git/
+[ec2-user@ip-172-31-1-189 ~]$ echo '# Git Lab'
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Hello Git'
+[ec2-user@ip-172-31-1-189 ~]$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	README.md
+	app.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+[ec2-user@ip-172-31-1-189 ~]$ git add .
+[ec2-user@ip-172-31-1-189 ~]$ git commit -m 'Initial commit'
+[master (root-commit) b204829] Initial commit
+ 2 files changed, 2 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 app.txt
+[ec2-user@ip-172-31-1-189 ~]$ git log --oneline
+=b204829 (HEAD -> master) Initial commit
+>[ec2-user@ip-172-31-1-189 ~]$ git show --stat
+=commit b204829de9ae38a133e8c1cf345509cd33de4af8 (HEAD -> master)
+Author: Kunal Hedau <kunal.hedau@gmail.com>
+Date:   Thu Aug 6 05:24:40 2026 +0000
+
+    Initial commit
+
+ README.md | 1 +
+ app.txt   | 1 +
+ 2 files changed, 2 insertions(+)
+>[ec2-user@ip-172-31-1-189 ~]$ git branch feature-login
+[ec2-user@ip-172-31-1-189 ~]$ git branch feature-payment
+[ec2-user@ip-172-31-1-189 ~]$ git branch release-v1
+[ec2-user@ip-172-31-1-189 ~]$ git switch feature-login
+Switched to branch 'feature-login'
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Login feature'
+[ec2-user@ip-172-31-1-189 ~]$ git add README.md
+[ec2-user@ip-172-31-1-189 ~]$ git commit -m 'Add login feature'
+[feature-login 1262b57] Add login feature
+ 1 file changed, 1 insertion(+)
+[ec2-user@ip-172-31-1-189 ~]$ git switch master
+Switched to branch 'master'
+[ec2-user@ip-172-31-1-189 ~]$ git merge feature-login
+Updating b204829..1262b57
+Fast-forward
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+[ec2-user@ip-172-31-1-189 ~]$ git log --oneline --graph --all
+=* 1262b57 (HEAD -> master, feature-login) Add login feature
+* b204829 (release-v1, feature-payment) Initial commit
+>[ec2-user@ip-172-31-1-189 ~]$ echo 'Manual merge conflict practice:'
+Manual merge conflict practice:
+[ec2-user@ip-172-31-1-189 ~]$ echo 'feature-payment -> modify README -> commit'
+feature-payment -> modify README -> commit
+[ec2-user@ip-172-31-1-189 ~]$ echo 'master -> modify README -> commit'
+master -> modify README -> commit
+[ec2-user@ip-172-31-1-189 ~]$ echo 'git merge feature-payment'
+git merge feature-payment
+[ec2-user@ip-172-31-1-189 ~]$ git switch feature-payment
+Switched to branch 'feature-payment'
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Payment feature'
+[ec2-user@ip-172-31-1-189 ~]$ git add payment.txt
+[ec2-user@ip-172-31-1-189 ~]$ git commit -m 'Add payment feature'
+[feature-payment 606fbf0] Add payment feature
+ 1 file changed, 1 insertion(+)
+ create mode 100644 payment.txt
+[ec2-user@ip-172-31-1-189 ~]$ git rebase master
+Rebasing (1/1)Successfully rebased and updated refs/heads/feature-payment.
+[ec2-user@ip-172-31-1-189 ~]$ git reflog
+=8311823 (HEAD -> feature-payment) HEAD@{0}: rebase (finish): returning to refs/heads/feature-payment
+8311823 (HEAD -> feature-payment) HEAD@{1}: rebase (pick): Add payment feature
+1262b57 (master, feature-login) HEAD@{2}: rebase (start): checkout master
+606fbf0 HEAD@{3}: commit: Add payment feature
+b204829 (release-v1) HEAD@{4}: checkout: moving from master to feature-payment
+1262b57 (master, feature-login) HEAD@{5}: merge feature-login: Fast-forward
+b204829 (release-v1) HEAD@{6}: checkout: moving from feature-login to master
+1262b57 (master, feature-login) HEAD@{7}: commit: Add login feature
+b204829 (release-v1) HEAD@{8}: checkout: moving from master to feature-login
+b204829 (release-v1) HEAD@{9}: commit (initial): Initial commit
+>[ec2-user@ip-172-31-1-189 ~]$ git tag v1.0
+[ec2-user@ip-172-31-1-189 ~]$ echo 'git cherry-pick <commit-id>'
+git cherry-pick <commit-id>
+[ec2-user@ip-172-31-1-189 ~]$ echo Temp
+[ec2-user@ip-172-31-1-189 ~]$ git stash
+Saved working directory and index state WIP on feature-payment: 8311823 Add payment feature
+[ec2-user@ip-172-31-1-189 ~]$ git stash list
+=stash@{0}: WIP on feature-payment: 8311823 Add payment feature
+>[ec2-user@ip-172-31-1-189 ~]$ git stash pop
+On branch feature-payment
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (f119aa0b0c44175613e876d9fbf383ae1430e5e4)
+[ec2-user@ip-172-31-1-189 ~]$ rm -f payment.txt
+[ec2-user@ip-172-31-1-189 ~]$ git restore payment.txt
+[ec2-user@ip-172-31-1-189 ~]$ git remote -v
+[ec2-user@ip-172-31-1-189 ~]$ echo 'git remote add origin https://bitbucket.org/kunalhedau/git-lab.git'
+git remote add origin https://bitbucket.org/kunalhedau/git-lab.git
+[ec2-user@ip-172-31-1-189 ~]$ echo 'git push -u origin master'
+git push -u origin master
+[ec2-user@ip-172-31-1-189 ~]$ cd /home/ec2-user
+[ec2-user@ip-172-31-1-189 ~]$ git clone git-lab git-lab-copy
+Cloning into 'git-lab-copy'...
+done.
+[ec2-user@ip-172-31-1-189 ~]$ cd /home/ec2-user/git-lab
+[ec2-user@ip-172-31-1-189 ~]$ git diff
+=diff --git a/README.md b/README.md
+index 0bbffc9..43f7c0e 100644
+--- a/README.md
++++ b/README.md
+@@ -1,2 +1,3 @@
+ # Git Lab
+ Login feature
++Temp
+>[ec2-user@ip-172-31-1-189 ~]$ git status
+On branch feature-payment
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+[ec2-user@ip-172-31-1-189 ~]$ cd /home/ec2-user
+[ec2-user@ip-172-31-1-189 ~]$ rm -rf git-lab-copy
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Day 6 Completed'
+Day 6 Completed
