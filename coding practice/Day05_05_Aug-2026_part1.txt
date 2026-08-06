@@ -1,0 +1,370 @@
+[ec2-user@ip-172-31-1-189 ~]$ echo ========================================================
+========================================================
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Linux Practice - Day 5 (Part 1)'
+Linux Practice - Day 5 (Part 1)
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Date: 05-Aug-2026'
+Date: 05-Aug-2026
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Environment: Amazon EC2 - Amazon Linux'
+Environment: Amazon EC2 - Amazon Linux
+[ec2-user@ip-172-31-1-189 ~]$ echo ========================================================
+========================================================
+[ec2-user@ip-172-31-1-189 ~]$ echo
+
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Topic: Terraform (Reference)'
+Topic: Terraform (Reference)
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo 'terraform version'
+terraform version
+[ec2-user@ip-172-31-1-189 ~]$ echo 'terraform init'
+terraform init
+[ec2-user@ip-172-31-1-189 ~]$ echo 'terraform fmt'
+terraform fmt
+[ec2-user@ip-172-31-1-189 ~]$ echo 'terraform validate'
+terraform validate
+[ec2-user@ip-172-31-1-189 ~]$ echo 'terraform plan'
+terraform plan
+[ec2-user@ip-172-31-1-189 ~]$ echo 'terraform apply'
+terraform apply
+[ec2-user@ip-172-31-1-189 ~]$ echo 'terraform destroy'
+terraform destroy
+[ec2-user@ip-172-31-1-189 ~]$ echo 'terraform show'
+terraform show
+[ec2-user@ip-172-31-1-189 ~]$ echo 'terraform state list'
+terraform state list
+[ec2-user@ip-172-31-1-189 ~]$ echo
+
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Topic: Process Commands'
+Topic: Process Commands
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ ps
+    PID TTY          TIME CMD
+   3387 pts/1    00:00:00 bash
+   3408 pts/1    00:00:00 linux_day5_part
+   3409 pts/1    00:00:00 ps
+[ec2-user@ip-172-31-1-189 ~]$ ps -ef
+[ec2-user@ip-172-31-1-189 ~]$ head
+UID          PID    PPID  C STIME TTY          TIME CMD
+root           1       0  0 00:05 ?        00:00:01 /usr/lib/systemd/systemd --switched-root --system --deserialize=32
+root           2       0  0 00:05 ?        00:00:00 [kthreadd]
+root           3       2  0 00:05 ?        00:00:00 [pool_workqueue_release]
+root           4       2  0 00:05 ?        00:00:00 [kworker/R-rcu_gp]
+root           5       2  0 00:05 ?        00:00:00 [kworker/R-sync_wq]
+root           6       2  0 00:05 ?        00:00:00 [kworker/R-kvfree_rcu_reclaim]
+root           7       2  0 00:05 ?        00:00:00 [kworker/R-slub_flushwq]
+root           8       2  0 00:05 ?        00:00:00 [kworker/R-netns]
+root          10       2  0 00:05 ?        00:00:00 [kworker/0:0H-kblockd]
+[ec2-user@ip-172-31-1-189 ~]$ ps aux
+[ec2-user@ip-172-31-1-189 ~]$ head
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  1.8 173236 17580 ?        Ss   00:05   0:01 /usr/lib/systemd/systemd --switched-root --system --deserialize=32
+root           2  0.0  0.0      0     0 ?        S    00:05   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        S    00:05   0:00 [pool_workqueue_release]
+root           4  0.0  0.0      0     0 ?        I<   00:05   0:00 [kworker/R-rcu_gp]
+root           5  0.0  0.0      0     0 ?        I<   00:05   0:00 [kworker/R-sync_wq]
+root           6  0.0  0.0      0     0 ?        I<   00:05   0:00 [kworker/R-kvfree_rcu_reclaim]
+root           7  0.0  0.0      0     0 ?        I<   00:05   0:00 [kworker/R-slub_flushwq]
+root           8  0.0  0.0      0     0 ?        I<   00:05   0:00 [kworker/R-netns]
+root          10  0.0  0.0      0     0 ?        I<   00:05   0:00 [kworker/0:0H-kblockd]
+[ec2-user@ip-172-31-1-189 ~]$ pgrep bash
+2776
+3387
+[ec2-user@ip-172-31-1-189 ~]$ pidof bash
+3408 3387 2776
+[ec2-user@ip-172-31-1-189 ~]$ jobs
+[1]+  Running                 sleep 60 &
+[ec2-user@ip-172-31-1-189 ~]$ sleep 60
+[ec2-user@ip-172-31-1-189 ~]$ ps -ef
+[ec2-user@ip-172-31-1-189 ~]$ grep sleep
+root        1696       1  0 00:05 ?        00:00:00 /usr/bin/systemd-inhibit --what=handle-suspend-key:handle-hibernate-key --who=ec2-hibinit-agent --why=acpid-sleep-handler --mode=block /usr/sbin/acpid -f
+ec2-user    3416    3408  0 00:37 pts/1    00:00:00 sleep 60
+ec2-user    3418    3408  0 00:37 pts/1    00:00:00 grep sleep
+[ec2-user@ip-172-31-1-189 ~]$ kill %1
+[ec2-user@ip-172-31-1-189 ~]$ pkill -f 'sleep 60'
+[ec2-user@ip-172-31-1-189 ~]$ sleep 60
+[ec2-user@ip-172-31-1-189 ~]$ top -b -n1
+[ec2-user@ip-172-31-1-189 ~]$ head -20
+top - 00:37:35 up 31 min,  2 users,  load average: 0.00, 0.00, 0.00
+Tasks: 107 total,   1 running, 106 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  3.2 sy,  0.0 ni, 96.8 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :    912.9 total,    501.8 free,    152.1 used,    258.9 buff/cache
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.    629.0 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+      1 root      20   0  173236  17580  10872 S   0.0   1.9   0:01.00 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kthreadd
+      3 root      20   0       0      0      0 S   0.0   0.0   0:00.00 pool_workqueue_release
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-rcu_gp
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-sync_wq
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-kvfree_rcu_reclaim
+      7 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-slub_flushwq
+      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-netns
+     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/0:0H-kblockd
+     12 root      20   0       0      0      0 I   0.0   0.0   0:00.26 kworker/u8:0-events_unbound
+     13 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-mm_percpu_wq
+     14 root      20   0       0      0      0 S   0.0   0.0   0:00.01 ksoftirqd/0
+     15 root      20   0       0      0      0 I   0.0   0.0   0:00.03 rcu_preempt
+[ec2-user@ip-172-31-1-189 ~]$ echo
+
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Topic: grep / egrep'
+Topic: grep / egrep
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ printf 'apple\nbanana\nAPPLE\ngrape\n'
+[ec2-user@ip-172-31-1-189 ~]$ cat fruits.txt
+apple
+banana
+APPLE
+grape
+[ec2-user@ip-172-31-1-189 ~]$ grep apple fruits.txt
+apple
+[ec2-user@ip-172-31-1-189 ~]$ grep -i apple fruits.txt
+apple
+APPLE
+[ec2-user@ip-172-31-1-189 ~]$ grep -n apple fruits.txt
+1:apple
+[ec2-user@ip-172-31-1-189 ~]$ grep -v apple fruits.txt
+banana
+APPLE
+grape
+[ec2-user@ip-172-31-1-189 ~]$ grep -c apple fruits.txt
+1
+[ec2-user@ip-172-31-1-189 ~]$ egrep 'apple|banana' fruits.txt
+apple
+banana
+[ec2-user@ip-172-31-1-189 ~]$ echo
+
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Topic: System Information'
+Topic: System Information
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ lscpu
+Architecture:                x86_64
+  CPU op-mode(s):            32-bit, 64-bit
+  Address sizes:             46 bits physical, 48 bits virtual
+  Byte Order:                Little Endian
+CPU(s):                      2
+  On-line CPU(s) list:       0,1
+Vendor ID:                   GenuineIntel
+  Model name:                Intel(R) Xeon(R) Platinum 8259CL CPU @ 2.50GHz
+    CPU family:              6
+    Model:                   85
+    Thread(s) per core:      2
+    Core(s) per socket:      1
+    Socket(s):               1
+    Stepping:                7
+    BogoMIPS:                5000.00
+    Flags:                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp
+                              lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic 
+                             movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault pti fsgsbase tsc_adjus
+                             t bmi1 avx2 smep bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsave
+                             c xgetbv1 xsaves ida arat pku ospke
+Virtualization features:     
+  Hypervisor vendor:         KVM
+  Virtualization type:       full
+Caches (sum of all):         
+  L1d:                       32 KiB (1 instance)
+  L1i:                       32 KiB (1 instance)
+  L2:                        1 MiB (1 instance)
+  L3:                        35.8 MiB (1 instance)
+NUMA:                        
+  NUMA node(s):              1
+  NUMA node0 CPU(s):         0,1
+Vulnerabilities:             
+  Gather data sampling:      Unknown: Dependent on hypervisor status
+  Ghostwrite:                Not affected
+  Indirect target selection: Mitigation; Aligned branch/return thunks
+  Itlb multihit:             KVM: Mitigation: VMX unsupported
+  L1tf:                      Mitigation; PTE Inversion
+  Mds:                       Vulnerable: Clear CPU buffers attempted, no microcode; SMT Host state unknown
+  Meltdown:                  Mitigation; PTI
+  Mmio stale data:           Vulnerable: Clear CPU buffers attempted, no microcode; SMT Host state unknown
+  Old microcode:             Not affected
+  Reg file data sampling:    Not affected
+  Retbleed:                  Vulnerable
+  Spec rstack overflow:      Not affected
+  Spec store bypass:         Vulnerable
+  Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+  Spectre v2:                Mitigation; Retpolines; STIBP disabled; RSB filling; PBRSB-eIBRS Not affected; BHI Retpoline
+  Srbds:                     Not affected
+  Tsa:                       Not affected
+  Tsx async abort:           Not affected
+  Vmscape:                   Not affected
+[ec2-user@ip-172-31-1-189 ~]$ uptime
+ 00:37:35 up 31 min,  2 users,  load average: 0.00, 0.00, 0.00
+[ec2-user@ip-172-31-1-189 ~]$ hostnamectl
+ Static hostname: ip-172-31-1-189.ap-south-1.compute.internal
+       Icon name: computer-vm
+         Chassis: vm 🖴
+      Machine ID: ec25251092f5b00875d3c02e7bb2e05a
+         Boot ID: ebab242b933f4d4ca723c1963ea1182c
+  Virtualization: amazon
+Operating System: Amazon Linux 2023.12.20260727
+     CPE OS Name: cpe:2.3:o:amazon:amazon_linux:2023
+          Kernel: Linux 6.18.38-76.139.amzn2023.x86_64
+    Architecture: x86-64
+ Hardware Vendor: Amazon EC2
+  Hardware Model: t3.micro
+Firmware Version: 1.0
+[ec2-user@ip-172-31-1-189 ~]$ free -h
+               total        used        free      shared  buff/cache   available
+Mem:           912Mi       153Mi       499Mi       0.0Ki       259Mi       627Mi
+Swap:             0B          0B          0B
+[ec2-user@ip-172-31-1-189 ~]$ df -h
+Filesystem        Size  Used Avail Use% Mounted on
+devtmpfs          420M     0  420M   0% /dev
+tmpfs             457M     0  457M   0% /dev/shm
+tmpfs             183M  448K  183M   1% /run
+efivarfs          128K  2.7K  121K   3% /sys/firmware/efi/efivars
+/dev/nvme0n1p1    8.0G  1.8G  6.2G  23% /
+tmpfs             457M     0  457M   0% /tmp
+/dev/nvme0n1p128   10M  1.3M  8.7M  13% /boot/efi
+tmpfs              92M     0   92M   0% /run/user/1000
+[ec2-user@ip-172-31-1-189 ~]$ echo
+
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Topic: Networking'
+Topic: Networking
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ ifconfig
+ens5: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 9001
+        inet 172.31.1.189  netmask 255.255.240.0  broadcast 172.31.15.255
+        inet6 fe80::84e:6aff:fe84:a3e3  prefixlen 64  scopeid 0x20<link>
+        ether 0a:4e:6a:84:a3:e3  txqueuelen 1000  (Ethernet)
+        RX packets 4237  bytes 2356886 (2.2 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2663  bytes 375077 (366.2 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 24  bytes 2040 (1.9 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 24  bytes 2040 (1.9 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+[ec2-user@ip-172-31-1-189 ~]$ ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: ens5: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9001 qdisc mq state UP group default qlen 1000
+    link/ether 0a:4e:6a:84:a3:e3 brd ff:ff:ff:ff:ff:ff
+    altname enp0s5
+    altname eni-0f97bd600b16eeec7
+    altname device-number-0.0
+    inet 172.31.1.189/20 metric 512 brd 172.31.15.255 scope global dynamic ens5
+       valid_lft 3488sec preferred_lft 3488sec
+    inet6 fe80::84e:6aff:fe84:a3e3/64 scope link proto kernel_ll 
+       valid_lft forever preferred_lft forever
+[ec2-user@ip-172-31-1-189 ~]$ ip route
+default via 172.31.0.1 dev ens5 proto dhcp src 172.31.1.189 metric 512 
+172.31.0.0/20 dev ens5 proto kernel scope link src 172.31.1.189 metric 512 
+172.31.0.1 dev ens5 proto dhcp scope link src 172.31.1.189 metric 512 
+172.31.0.2 dev ens5 proto dhcp scope link src 172.31.1.189 metric 512 
+[ec2-user@ip-172-31-1-189 ~]$ ping -c 4 8.8.8.8
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=117 time=0.809 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=117 time=0.814 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=117 time=0.823 ms
+64 bytes from 8.8.8.8: icmp_seq=4 ttl=117 time=0.819 ms
+
+--- 8.8.8.8 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3089ms
+rtt min/avg/max/mdev = 0.809/0.816/0.823/0.005 ms
+[ec2-user@ip-172-31-1-189 ~]$ netstat -tuln
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN     
+tcp6       0      0 :::22                   :::*                    LISTEN     
+udp        0      0 127.0.0.1:323           0.0.0.0:*                          
+udp        0      0 172.31.1.189:68         0.0.0.0:*                          
+udp6       0      0 ::1:323                 :::*                               
+udp6       0      0 fe80::84e:6aff:fe84:546 :::*                               
+[ec2-user@ip-172-31-1-189 ~]$ ss -tuln
+Netid          State           Recv-Q          Send-Q                                       Local Address:Port                     Peer Address:Port          
+udp            UNCONN          0               0                                                127.0.0.1:323                           0.0.0.0:*             
+udp            UNCONN          0               0                                        172.31.1.189%ens5:68                            0.0.0.0:*             
+udp            UNCONN          0               0                                                    [::1]:323                              [::]:*             
+udp            UNCONN          0               0                          [fe80::84e:6aff:fe84:a3e3]%ens5:546                              [::]:*             
+tcp            LISTEN          0               128                                                0.0.0.0:22                            0.0.0.0:*             
+tcp            LISTEN          0               128                                                   [::]:22                               [::]:*             
+[ec2-user@ip-172-31-1-189 ~]$ iostat
+Linux 6.18.38-76.139.amzn2023.x86_64 (ip-172-31-1-189.ap-south-1.compute.internal) 	08/06/26 	_x86_64_	(2 CPU)
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+           0.20    0.00    0.14    0.07    0.09   99.49
+
+Device             tps    kB_read/s    kB_wrtn/s    kB_dscd/s    kB_read    kB_wrtn    kB_dscd
+nvme0n1           5.07       139.49        17.12         0.00     267883      32868          0
+
+
+[ec2-user@ip-172-31-1-189 ~]$ echo quit
+[ec2-user@ip-172-31-1-189 ~]$ telnet google.com 80
+./linux_day5_part1.sh: line 77: telnet: command not found
+[ec2-user@ip-172-31-1-189 ~]$ true
+[ec2-user@ip-172-31-1-189 ~]$ curl -I https://example.com
+HTTP/2 200 
+date: Thu, 06 Aug 2026 00:37:38 GMT
+content-type: text/html
+server: cloudflare
+last-modified: Sat, 01 Aug 2026 09:39:03 GMT
+allow: GET, HEAD
+accept-ranges: bytes
+age: 8854
+cf-cache-status: HIT
+cf-ray: a269f964c9990028-BOM
+
+[ec2-user@ip-172-31-1-189 ~]$ echo
+
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Topic: Runlevels / Targets'
+Topic: Runlevels / Targets
+[ec2-user@ip-172-31-1-189 ~]$ echo ==============================
+==============================
+[ec2-user@ip-172-31-1-189 ~]$ runlevel
+N 5
+[ec2-user@ip-172-31-1-189 ~]$ who -r
+         run-level 5  2026-08-06 00:05
+[ec2-user@ip-172-31-1-189 ~]$ systemctl get-default
+graphical.target
+[ec2-user@ip-172-31-1-189 ~]$ systemctl list-units --type=target --no-pager
+[ec2-user@ip-172-31-1-189 ~]$ head -15
+  UNIT                     LOAD   ACTIVE SUB    DESCRIPTION
+  basic.target             loaded active active Basic System
+  cloud-config.target      loaded active active Cloud-config availability
+  cloud-init.target        loaded active active Cloud-init target
+  cryptsetup.target        loaded active active Local Encrypted Volumes
+  getty.target             loaded active active Login Prompts
+  graphical.target         loaded active active Graphical Interface
+  integritysetup.target    loaded active active Local Integrity Protected Volumes
+  local-fs-pre.target      loaded active active Preparation for Local File Systems
+  local-fs.target          loaded active active Local File Systems
+  multi-user.target        loaded active active Multi-User System
+  network-online.target    loaded active active Network is Online
+  network-pre.target       loaded active active Preparation for Network
+  network.target           loaded active active Network
+  nfs-client.target        loaded active active NFS client services
+[ec2-user@ip-172-31-1-189 ~]$ rm -f fruits.txt
+[ec2-user@ip-172-31-1-189 ~]$ echo ========================================================
+========================================================
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Day 5 Part 1 Completed'
+Day 5 Part 1 Completed
+[ec2-user@ip-172-31-1-189 ~]$ echo ========================================================
+========================================================

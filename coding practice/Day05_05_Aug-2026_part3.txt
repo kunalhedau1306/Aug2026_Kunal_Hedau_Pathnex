@@ -1,0 +1,101 @@
+[ec2-user@ip-172-31-1-189 ~]$ echo ========================================================
+========================================================
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Linux Practice - Day 5 (Part 3)'
+Linux Practice - Day 5 (Part 3)
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Advanced Shell Scripting'
+Advanced Shell Scripting
+[ec2-user@ip-172-31-1-189 ~]$ echo ========================================================
+========================================================
+[ec2-user@ip-172-31-1-189 ~]$ echo '== File Handling =='
+== File Handling ==
+[ec2-user@ip-172-31-1-189 ~]$ mkdir -p demo_dir
+[ec2-user@ip-172-31-1-189 ~]$ echo Linux
+[ec2-user@ip-172-31-1-189 ~]$ cat demo_dir/file.txt
+Linux
+[ec2-user@ip-172-31-1-189 ~]$ cp demo_dir/file.txt demo_dir/file_copy.txt
+[ec2-user@ip-172-31-1-189 ~]$ mv demo_dir/file_copy.txt demo_dir/file_moved.txt
+[ec2-user@ip-172-31-1-189 ~]$ ls -l demo_dir
+total 8
+-rw-rw-r--. 1 ec2-user ec2-user 6 Aug  6 00:38 file.txt
+-rw-rw-r--. 1 ec2-user ec2-user 6 Aug  6 00:38 file_moved.txt
+[ec2-user@ip-172-31-1-189 ~]$ echo '== Input / Output Redirection =='
+== Input / Output Redirection ==
+[ec2-user@ip-172-31-1-189 ~]$ echo Hello
+[ec2-user@ip-172-31-1-189 ~]$ echo World
+[ec2-user@ip-172-31-1-189 ~]$ cat
+Hello
+World
+[ec2-user@ip-172-31-1-189 ~]$ ls -l
+[ec2-user@ip-172-31-1-189 ~]$ cat listing.txt
+total 64
+drwxr-xr-x. 5 ec2-user ec2-user    56 Aug  4 08:06 Aug2026_Kunal_Hedau_Pathnex
+-rwxr-xr-x. 1 ec2-user ec2-user   878 Aug  4 00:34 clean_script_output.sh
+drwxrwxr-x. 2 ec2-user ec2-user    44 Aug  6 00:38 demo_dir
+-rwxr-xr-x. 1 ec2-user ec2-user  2112 Aug  6 00:31 linux_day5_part1.sh
+-rwxr-xr-x. 1 ec2-user ec2-user  1478 Aug  6 00:33 linux_day5_part2.sh
+-rwxr-xr-x. 1 ec2-user ec2-user  1378 Aug  6 00:35 linux_day5_part3.sh
+-rw-r--r--. 1 ec2-user ec2-user 20602 Aug  6 00:37 linux_p1.txt
+-rw-r--r--. 1 ec2-user ec2-user  5441 Aug  6 00:38 linux_p2.txt
+-rw-r--r--. 1 ec2-user ec2-user     0 Aug  6 00:38 linux_p3.txt
+-rw-rw-r--. 1 ec2-user ec2-user     0 Aug  6 00:38 listing.txt
+-rw-rw-r--. 1 ec2-user ec2-user   292 Aug  4 07:59 numbers.txt
+-rw-rw-r--. 1 ec2-user ec2-user    12 Aug  6 00:38 out.txt
+-rw-r--r--. 1 ec2-user ec2-user    49 Aug  3 17:21 practice_command.txt
+-rw-rw-r--. 1 ec2-user ec2-user    12 Aug  4 07:59 values.txt
+[ec2-user@ip-172-31-1-189 ~]$ echo '== grep =='
+== grep ==
+[ec2-user@ip-172-31-1-189 ~]$ grep Linux demo_dir/file.txt
+Linux
+[ec2-user@ip-172-31-1-189 ~]$ echo '== sed =='
+== sed ==
+[ec2-user@ip-172-31-1-189 ~]$ sed 's/Linux/Amazon Linux/' demo_dir/file.txt
+Amazon Linux
+[ec2-user@ip-172-31-1-189 ~]$ echo '== awk =='
+== awk ==
+[ec2-user@ip-172-31-1-189 ~]$ awk '{print $1}' demo_dir/file.txt
+Linux
+[ec2-user@ip-172-31-1-189 ~]$ awk 'BEGIN{print "Rows:",0}'
+Rows: 0
+[ec2-user@ip-172-31-1-189 ~]$ echo '== Process Management =='
+== Process Management ==
+[ec2-user@ip-172-31-1-189 ~]$ jobs
+[1]+  Running                 sleep 30 &
+[ec2-user@ip-172-31-1-189 ~]$ sleep 30
+[ec2-user@ip-172-31-1-189 ~]$ ps -ef
+[ec2-user@ip-172-31-1-189 ~]$ grep sleep
+root        1696       1  0 00:05 ?        00:00:00 /usr/bin/systemd-inhibit --what=handle-suspend-key:handle-hibernate-key --who=ec2-hibinit-agent --why=acpid-sleep-handler --mode=block /usr/sbin/acpid -f
+ec2-user    3587    3574  0 00:38 pts/1    00:00:00 sleep 30
+ec2-user    3589    3574  0 00:38 pts/1    00:00:00 grep sleep
+[ec2-user@ip-172-31-1-189 ~]$ kill %1
+[ec2-user@ip-172-31-1-189 ~]$ echo '== Error Handling =='
+== Error Handling ==
+[ec2-user@ip-172-31-1-189 ~]$ set -e
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Error handling enabled'
+Error handling enabled
+[ec2-user@ip-172-31-1-189 ~]$ true
+[ec2-user@ip-172-31-1-189 ~]$ echo '== Debugging =='
+== Debugging ==
+[ec2-user@ip-172-31-1-189 ~]$ set +x
+Debug OFF
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Debug ON'
+Debug ON
+[ec2-user@ip-172-31-1-189 ~]$ echo '== Cron Jobs =='
+== Cron Jobs ==
+[ec2-user@ip-172-31-1-189 ~]$ echo 'View current cron:'
+View current cron:
+[ec2-user@ip-172-31-1-189 ~]$ crontab -l
+./linux_day5_part3.sh: line 55: crontab: command not found
+[ec2-user@ip-172-31-1-189 ~]$ true
+[ec2-user@ip-172-31-1-189 ~]$ echo Example:
+Example:
+[ec2-user@ip-172-31-1-189 ~]$ echo '0 2 * * * /home/ec2-user/backup.sh'
+0 2 * * * /home/ec2-user/backup.sh
+[ec2-user@ip-172-31-1-189 ~]$ echo '== Cleanup =='
+== Cleanup ==
+[ec2-user@ip-172-31-1-189 ~]$ rm -rf demo_dir out.txt listing.txt
+[ec2-user@ip-172-31-1-189 ~]$ echo ========================================================
+========================================================
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Day 5 Part 3 Completed'
+Day 5 Part 3 Completed
+[ec2-user@ip-172-31-1-189 ~]$ echo ========================================================
+========================================================

@@ -1,0 +1,8 @@
+# What I did today
+# 3 hours - Attended Linux admin morning session
+# Comment on Video what you learnt
+# 30 mins - Gave a 2 min talk on linux and ec2 in evening session
+# 1 hour - Practiced Linux commands and creating daily branches and pull request
+# 1 hour - Watched Shell scripting video - https://www.youtube.com/watch?v=x143ejWhQGw&t=3465s
+# 1 hour - Practiced Shell scripting
+
