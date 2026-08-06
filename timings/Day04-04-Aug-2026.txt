@@ -1,0 +1,8 @@
+----------------------------------------
+----------------------------------------
+# What I did today
+# 3 hours - Attended Linux Admin day3 morning session
+# Comment on Video what you learnt
+# 30 mins - Gave a 2 min talk on Linux Admin evening session
+# 2 hours - Created Day04 branch on github repository and practiced commands
+
