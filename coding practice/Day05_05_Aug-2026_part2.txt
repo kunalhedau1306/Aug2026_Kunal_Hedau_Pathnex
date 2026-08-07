@@ -1,0 +1,144 @@
+[ec2-user@ip-172-31-1-189 ~]$ echo ========================================================
+========================================================
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Linux Practice - Day 5 (Part 2)'
+Linux Practice - Day 5 (Part 2)
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Shell Scripting Basics'
+Shell Scripting Basics
+[ec2-user@ip-172-31-1-189 ~]$ echo ========================================================
+========================================================
+[ec2-user@ip-172-31-1-189 ~]$ echo '== Shebang =='
+== Shebang ==
+[ec2-user@ip-172-31-1-189 ~]$ echo 'This script starts with #!/bin/bash'
+This script starts with #!/bin/bash
+[ec2-user@ip-172-31-1-189 ~]$ echo '== Variables =='
+== Variables ==
+[ec2-user@ip-172-31-1-189 ~]$ NAME=Kunal
+[ec2-user@ip-172-31-1-189 ~]$ AGE=42
+[ec2-user@ip-172-31-1-189 ~]$ echo Kunal
+Kunal
+[ec2-user@ip-172-31-1-189 ~]$ echo 42
+42
+[ec2-user@ip-172-31-1-189 ~]$ echo '== User Input =='
+== User Input ==
+[ec2-user@ip-172-31-1-189 ~]$ read -p 'Enter your name: ' USERNAME
+Enter your name: kunalh 
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Hello kunal'
+Hello kunal
+[ec2-user@ip-172-31-1-189 ~]$ echo '== Special Variables =='
+== Special Variables ==
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Script: ./linux_day5_part2.sh'
+Script: ./linux_day5_part2.sh
+[ec2-user@ip-172-31-1-189 ~]$ echo 'PID: 3548'
+PID: 3548
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Args count: 0'
+Args count: 0
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Args: '
+Args: 
+[ec2-user@ip-172-31-1-189 ~]$ echo 'First arg: '
+First arg: 
+[ec2-user@ip-172-31-1-189 ~]$ true
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Status: 0'
+Status: 0
+[ec2-user@ip-172-31-1-189 ~]$ echo '== Operators =='
+== Operators ==
+[ec2-user@ip-172-31-1-189 ~]$ A=10
+[ec2-user@ip-172-31-1-189 ~]$ B=5
+[ec2-user@ip-172-31-1-189 ~]$ echo 15
+15
+[ec2-user@ip-172-31-1-189 ~]$ echo 5
+5
+[ec2-user@ip-172-31-1-189 ~]$ echo 50
+50
+[ec2-user@ip-172-31-1-189 ~]$ echo 2
+2
+[ec2-user@ip-172-31-1-189 ~]$ echo 0
+0
+[ec2-user@ip-172-31-1-189 ~]$ echo '== If Else =='
+== If Else ==
+[ec2-user@ip-172-31-1-189 ~]$ '[' 10 -gt 5 ']'
+[ec2-user@ip-172-31-1-189 ~]$ echo 'A>B'
+A>B
+[ec2-user@ip-172-31-1-189 ~]$ echo '== Case =='
+== Case ==
+[ec2-user@ip-172-31-1-189 ~]$ DAY=Mon
+[ec2-user@ip-172-31-1-189 ~]$ case $DAY in
+[ec2-user@ip-172-31-1-189 ~]$ echo Monday
+Monday
+[ec2-user@ip-172-31-1-189 ~]$ echo '== For Loop =='
+== For Loop ==
+[ec2-user@ip-172-31-1-189 ~]$ for i in 1 2 3 4 5
+[ec2-user@ip-172-31-1-189 ~]$ echo 1
+1
+[ec2-user@ip-172-31-1-189 ~]$ for i in 1 2 3 4 5
+[ec2-user@ip-172-31-1-189 ~]$ echo 2
+2
+[ec2-user@ip-172-31-1-189 ~]$ for i in 1 2 3 4 5
+[ec2-user@ip-172-31-1-189 ~]$ echo 3
+3
+[ec2-user@ip-172-31-1-189 ~]$ for i in 1 2 3 4 5
+[ec2-user@ip-172-31-1-189 ~]$ echo 4
+4
+[ec2-user@ip-172-31-1-189 ~]$ for i in 1 2 3 4 5
+[ec2-user@ip-172-31-1-189 ~]$ echo 5
+5
+[ec2-user@ip-172-31-1-189 ~]$ echo '== While Loop =='
+== While Loop ==
+[ec2-user@ip-172-31-1-189 ~]$ C=1
+[ec2-user@ip-172-31-1-189 ~]$ '[' 1 -le 3 ']'
+[ec2-user@ip-172-31-1-189 ~]$ echo 1
+1
+[ec2-user@ip-172-31-1-189 ~]$ C=2
+[ec2-user@ip-172-31-1-189 ~]$ '[' 2 -le 3 ']'
+[ec2-user@ip-172-31-1-189 ~]$ echo 2
+2
+[ec2-user@ip-172-31-1-189 ~]$ C=3
+[ec2-user@ip-172-31-1-189 ~]$ '[' 3 -le 3 ']'
+[ec2-user@ip-172-31-1-189 ~]$ echo 3
+3
+[ec2-user@ip-172-31-1-189 ~]$ C=4
+[ec2-user@ip-172-31-1-189 ~]$ '[' 4 -le 3 ']'
+[ec2-user@ip-172-31-1-189 ~]$ echo '== Until Loop =='
+== Until Loop ==
+[ec2-user@ip-172-31-1-189 ~]$ U=1
+[ec2-user@ip-172-31-1-189 ~]$ '[' 1 -gt 3 ']'
+[ec2-user@ip-172-31-1-189 ~]$ echo 1
+1
+[ec2-user@ip-172-31-1-189 ~]$ U=2
+[ec2-user@ip-172-31-1-189 ~]$ '[' 2 -gt 3 ']'
+[ec2-user@ip-172-31-1-189 ~]$ echo 2
+2
+[ec2-user@ip-172-31-1-189 ~]$ U=3
+[ec2-user@ip-172-31-1-189 ~]$ '[' 3 -gt 3 ']'
+[ec2-user@ip-172-31-1-189 ~]$ echo 3
+3
+[ec2-user@ip-172-31-1-189 ~]$ U=4
+[ec2-user@ip-172-31-1-189 ~]$ '[' 4 -gt 3 ']'
+[ec2-user@ip-172-31-1-189 ~]$ echo '== Functions =='
+== Functions ==
+[ec2-user@ip-172-31-1-189 ~]$ greet Linux
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Welcome Linux'
+Welcome Linux
+[ec2-user@ip-172-31-1-189 ~]$ echo '== Arrays =='
+== Arrays ==
+[ec2-user@ip-172-31-1-189 ~]$ ARR=(red green blue)
+[ec2-user@ip-172-31-1-189 ~]$ echo red
+red
+[ec2-user@ip-172-31-1-189 ~]$ echo red green blue
+red green blue
+[ec2-user@ip-172-31-1-189 ~]$ echo 3
+3
+[ec2-user@ip-172-31-1-189 ~]$ for X in "${ARR[@]}"
+[ec2-user@ip-172-31-1-189 ~]$ echo red
+red
+[ec2-user@ip-172-31-1-189 ~]$ for X in "${ARR[@]}"
+[ec2-user@ip-172-31-1-189 ~]$ echo green
+green
+[ec2-user@ip-172-31-1-189 ~]$ for X in "${ARR[@]}"
+[ec2-user@ip-172-31-1-189 ~]$ echo blue
+blue
+[ec2-user@ip-172-31-1-189 ~]$ echo ========================================================
+========================================================
+[ec2-user@ip-172-31-1-189 ~]$ echo 'Day 5 Part 2 Completed'
+Day 5 Part 2 Completed
+[ec2-user@ip-172-31-1-189 ~]$ echo ========================================================
+========================================================
