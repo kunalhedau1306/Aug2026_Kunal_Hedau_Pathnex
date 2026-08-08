@@ -1,0 +1,5 @@
+# What I did today
+# 3 hours - Attended GIT administration  morning session
+# Comment on Video what you learnt
+# 30 mins - Gave a 2 min talk on GIT in evening session
+# 2 hour - Practiced GIT commands and created daily branches and pull request
