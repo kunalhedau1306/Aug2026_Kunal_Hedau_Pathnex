@@ -1,0 +1,8 @@
+----------------------------------------
+----------------------------------------
+# What I did today
+# 3 hours - Attended AWS day2 morning session
+# Comment on Video what you learnt
+# 30 mins - Gave a 2 min talk on AWS day2 evening session
+# 2 hours - Studied AWS services and concepts and created Day08 branch on github repository
+
