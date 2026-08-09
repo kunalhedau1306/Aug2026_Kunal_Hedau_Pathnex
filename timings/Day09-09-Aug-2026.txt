@@ -1,0 +1,5 @@
+# What I did today
+# 3 hours - Attended AWS day 3 morning session
+# Comment on Video what you learnt
+# 30 mins - Gave a 2 min talk on AWS-day3 in evening session
+# 2 hour - Studied AWS services like Shield, WAF, GuardDuty, Inspector, KMS, SSM, EventBridge, Aurora and DynamoDB. Created daily branches and pull request.
