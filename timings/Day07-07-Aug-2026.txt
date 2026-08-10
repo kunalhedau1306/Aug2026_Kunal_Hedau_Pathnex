@@ -1,0 +1,6 @@
+# What I did today
+# 3 hours - Attended Cloud Fundamentals and AWS morning session
+# Comment on Video what you learnt
+# 30 mins - Gave a 2 min talk on Cloud Fundamentals and AWS in evening session
+# 2 hour - Studied Cloud Fundamentals theory, AWS core services and created daily branches and pull request
+
