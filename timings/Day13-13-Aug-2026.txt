@@ -1,0 +1,8 @@
+----------------------------------------
+----------------------------------------
+# What I did today
+# 3 hours - Attended Kubernetes day2 morning session
+# Comment on Video what you learnt
+# 30 mins - Gave a 2 min talk on Kubernetes upgrade and release cycle day2 evening session
+# 2 hours - Studied Kubernetes Upgrade and Release cycle and created Day13 branch on github repository
+
