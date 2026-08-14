@@ -1,0 +1,8 @@
+----------------------------------------
+----------------------------------------
+# What I did today
+# 3 hours - Attended Docker  morning session
+# Comment on Video what you learnt
+# 30 mins - Gave a 2 min talk on Docker evening session
+# 2 hours - Studied Docker concepts and practiced Docker commands. Created Day11 branch on github repository
+
