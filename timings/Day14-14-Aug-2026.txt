@@ -1,0 +1,8 @@
+----------------------------------------
+----------------------------------------
+# What I did today
+# 3 hours - Attended Kubernetes Day 3 morning session
+# Comment on Video what you learnt
+# 30 mins - Gave a 2 min talk on Kubernetes evening session
+# 2 hours - Studied Kubernetes concepts and practiced  Kubernetes commands. Created Day14 branch on github repository
+
