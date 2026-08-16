@@ -1,0 +1,8 @@
+----------------------------------------
+----------------------------------------
+# What I did today
+# 3 hours - Attended Kubernetes Day-5  morning session
+# Comment on Video what you learnt
+# 30 mins - Gave a 2 min talk on Kubernetes Day-5 evening session
+# 2 hours - Studied Kubernetes troubleshooting by deploying nginx application on eks cluster. Created Day16 branch on github repository.
+
