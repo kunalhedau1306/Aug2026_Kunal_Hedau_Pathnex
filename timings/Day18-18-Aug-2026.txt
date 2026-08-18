@@ -1,0 +1,8 @@
+----------------------------------------
+----------------------------------------
+# What I did today
+# 3 hours - Attended Helm morning session
+# Comment on Video what you learnt
+# 30 mins - Gave a 2 min talk on Helm in  evening session
+# 2 hours - Studied Helm and created Day18 branch on github repository
+
