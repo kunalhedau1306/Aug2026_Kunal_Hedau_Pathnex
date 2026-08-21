@@ -1,0 +1,7 @@
+----------------------------------------
+----------------------------------------
+# What I did today
+# No morning session today.
+# 30 mins - Gave a 2 min talk on Recap of Devops topics covered till now in evening session.
+# 4 hours - Studied Devops topics covered till now, and created Day17 branch on github repository
+
