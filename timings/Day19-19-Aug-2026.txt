@@ -1,0 +1,5 @@
+# What I did today
+# 3 hours - Attended ArgoCD and GitOps morning session
+# Comment on Video what you learnt
+# 30 mins - Gave a 2 min talk on ArgoCD and GitOps in evening session
+# 2 hour - Studied ArgoCD and GitOps and made notes. Created daily branches and pull request.
