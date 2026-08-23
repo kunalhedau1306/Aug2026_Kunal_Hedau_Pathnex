@@ -1,0 +1,8 @@
+----------------------------------------
+----------------------------------------
+# What I did today
+# 4 hrs - Attended CICD morning session
+# Commented on Youtube Video
+# 30 mins - Gave a 2 min talk on CICD in evening session.
+# 2 hrs - Studied CICD and created Day17 branch on github repository
+
