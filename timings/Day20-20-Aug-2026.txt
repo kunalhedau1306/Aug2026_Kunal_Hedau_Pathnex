@@ -1,0 +1,8 @@
+----------------------------------------
+----------------------------------------
+# What I did today
+# 3 hours - Attended Terraform 1st  morning session
+# Comment on Video what you learnt
+# 30 mins - Gave a 2 min talk on Terraform-1 evening session
+# 2 hours - Studied Terraform. Created Day20 branch on github repository.
+
