@@ -1,0 +1,8 @@
+----------------------------------------
+----------------------------------------
+# What I did today
+# 3 hours - Attended Prometheus and Grafana  morning session
+# Comment on Video what you learnt
+# 30 mins - Gave a 2 min talk on Prometheus and Grafana evening session
+# 2 hours - Studied Prometheus and Grafana. Created Day25 branch on github repository.
+
