@@ -1,0 +1,5 @@
+# What I did today
+# 3 hours - Attended SSL Certificates morning session
+# Comment on Video what you learnt
+# 30 mins - Gave a 2 min talk on SSL Certificates in evening session
+# 2 hour - Studied SSL Certificates and made notes. Created daily branches and pull request.
