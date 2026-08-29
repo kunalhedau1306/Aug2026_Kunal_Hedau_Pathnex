@@ -1,0 +1,4 @@
+# What I did today
+# No morning session today
+# 30 mins - Gave a 2 min talk on Jenkins in evening session
+# 2 hour - Studied Jenkins and made notes. Created daily branches and pull request.
